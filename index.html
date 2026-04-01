@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>看电视 tvcn.org 直播·视频·电视·音乐·有声·游戏·体育·纪录片·娱乐一站式导航</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="header-bar">
+            <div class="logo">看电视</div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索网站、电视台或工具...">
+                <button onclick="search()">搜索</button>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showSection('video')">视频平台</button>
+            <button class="nav-tab" onclick="showSection('tv')">电视直播</button>
+            <button class="nav-tab" onclick="showSection('music')">音乐音频</button>
+            <button class="nav-tab" onclick="showSection('short')">短视频</button>
+            <button class="nav-tab" onclick="showSection('live')">直播</button>
+            <button class="nav-tab" onclick="showSection('movie')">影视追剧</button>
+            <button class="nav-tab" onclick="showSection('game')">游戏电竞</button>
+            <button class="nav-tab" onclick="showSection('tool')">创作工具</button>
+        </div>
+
+        <!-- 视频平台 -->
+        <div id="video" class="section active">
+            <div class="category">
+                <div class="category-title">综合视频平台</div>
+                <div class="links-grid">
+                    <a href="https://www.youku.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1e90ff,#00a0e9);">优</div>
+                        <span class="link-name">优酷</span><span class="link-desc">综合视频</span>
+                    </a>
+                    <a href="https://www.iqiyi.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#00d166);">爱</div>
+                        <span class="link-name">爱奇艺</span><span class="link-desc">综合视频</span>
+                    </a>
+                    <a href="https://v.qq.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#00c3ff);">腾</div>
+                        <span class="link-name">腾讯视频</span><span class="link-desc">综合视频</span>
+                    </a>
+                    <a href="https://www.mgtv.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">芒</div>
+                        <span class="link-name">芒果TV</span><span class="link-desc">综艺娱乐</span>
+                    </a>
+                    <a href="https://www.bilibili.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#fb7299,#ff85ad);">B</div>
+                        <span class="link-name">哔哩哔哩</span><span class="link-desc">弹幕视频</span>
+                    </a>
+                    <a href="https://www.pptv.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">P</div>
+                        <span class="link-name">PPTV</span><span class="link-desc">体育视频</span>
+                    </a>
+                    <a href="https://www.le.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#f54343,#ff6b6b);">乐</div>
+                        <span class="link-name">乐视视频</span><span class="link-desc">综合视频</span>
+                    </a>
+                    <a href="https://tv.sohu.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff8500,#ffa94d);">搜</div>
+                        <span class="link-name">搜狐视频</span><span class="link-desc">美剧资源</span>
+                    </a>
+                    <a href="https://www.1905.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">19</div>
+                        <span class="link-name">1905电影</span><span class="link-desc">电影频道</span>
+                    </a>
+                    <a href="https://www.cctv.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">央</div>
+                        <span class="link-name">央视网</span><span class="link-desc">官方视频</span>
+                    </a>
+                    <a href="https://www.cgtn.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">CG</div>
+                        <span class="link-name">CGTN</span><span class="link-desc">国际频道</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">直</div>
+                        <span class="link-name">央视直播</span><span class="link-desc">在线直播</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">国外视频平台</div>
+                <div class="links-grid">
+                    <a href="https://www.youtube.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0000,#ff4d4d);">▶</div>
+                        <span class="link-name">YouTube</span><span class="link-desc">全球最大</span>
+                    </a>
+                    <a href="https://www.netflix.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#e50914,#ff1a25);">N</div>
+                        <span class="link-name">Netflix</span><span class="link-desc">流媒体巨头</span>
+                    </a>
+                    <a href="https://www.hulu.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1ce783,#4dffa3);">H</div>
+                        <span class="link-name">Hulu</span><span class="link-desc">美国视频</span>
+                    </a>
+                    <a href="https://www.disneyplus.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#113ccf,#3366ff);">D+</div>
+                        <span class="link-name">Disney+</span><span class="link-desc">迪士尼</span>
+                    </a>
+                    <a href="https://www.max.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#9900ff,#b84dff);">M</div>
+                        <span class="link-name">Max</span><span class="link-desc">HBO新品牌</span>
+                    </a>
+                    <a href="https://www.primevideo.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a8e1,#33ccff);">P</div>
+                        <span class="link-name">Prime Video</span><span class="link-desc">亚马逊</span>
+                    </a>
+                    <a href="https://vimeo.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1ab7ea,#4dcfff);">V</div>
+                        <span class="link-name">Vimeo</span><span class="link-desc">高清视频</span>
+                    </a>
+                    <a href="https://www.dailymotion.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00d1c1,#33e6d6);">D</div>
+                        <span class="link-name">Dailymotion</span><span class="link-desc">法国视频</span>
+                    </a>
+                    <a href="https://www.apple.com/apple-tv-plus/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">A</div>
+                        <span class="link-name">Apple TV+</span><span class="link-desc">苹果原创</span>
+                    </a>
+                    <a href="https://www.peacocktv.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00d1c1,#33e6d6);">P</div>
+                        <span class="link-name">Peacock</span><span class="link-desc">NBC环球</span>
+                    </a>
+                    <a href="https://www.paramountplus.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#0064ff,#3385ff);">P+</div>
+                        <span class="link-name">Paramount+</span><span class="link-desc">派拉蒙</span>
+                    </a>
+                    <a href="https://www.crunchyroll.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#f47521,#ff9a4d);">C</div>
+                        <span class="link-name">Crunchyroll</span><span class="link-desc">动漫平台</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">体育视频</div>
+                <div class="links-grid">
+                    <a href="https://sports.qq.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">腾</div>
+                        <span class="link-name">腾讯体育</span><span class="link-desc">NBA英超</span>
+                    </a>
+                    <a href="https://sports.iqiyi.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">爱</div>
+                        <span class="link-name">爱奇艺体育</span><span class="link-desc">足球网球</span>
+                    </a>
+                    <a href="https://www.miguvideo.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#0091ff,#33b5ff);">咪</div>
+                        <span class="link-name">咪咕视频</span><span class="link-desc">体育赛事</span>
+                    </a>
+                    <a href="https://www.espn.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">E</div>
+                        <span class="link-name">ESPN</span><span class="link-desc">体育巨头</span>
+                    </a>
+                    <a href="https://www.nba.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1d428a,#3366cc);">NBA</div>
+                        <span class="link-name">NBA官网</span><span class="link-desc">美国篮球</span>
+                    </a>
+                    <a href="https://www.uefa.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">U</div>
+                        <span class="link-name">欧足联</span><span class="link-desc">欧洲足球</span>
+                    </a>
+                    <a href="https://www.fifa.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#326295,#4d85b8);">F</div>
+                        <span class="link-name">FIFA</span><span class="link-desc">国际足联</span>
+                    </a>
+                    <a href="https://www.dazn.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">D</div>
+                        <span class="link-name">DAZN</span><span class="link-desc">体育直播</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">纪录片/知识</div>
+                <div class="links-grid">
+                    <a href="https://jishi.cctv.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">央</div>
+                        <span class="link-name">央视纪录</span><span class="link-desc">官方纪录</span>
+                    </a>
+                    <a href="https://www.bilibili.com/documentary/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#fb7299,#ff85ad);">B</div>
+                        <span class="link-name">B站纪录片</span><span class="link-desc">优质纪录</span>
+                    </a>
+                    <a href="https://www.discovery.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#0064ff,#3385ff);">D</div>
+                        <span class="link-name">Discovery</span><span class="link-desc">探索频道</span>
+                    </a>
+                    <a href="https://www.nationalgeographic.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ffcc00,#ffe066);color:#000;">NG</div>
+                        <span class="link-name">国家地理</span><span class="link-desc">自然人文</span>
+                    </a>
+                    <a href="https://www.ted.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#e62b1e,#ff5c4d);">T</div>
+                        <span class="link-name">TED</span><span class="link-desc">演讲平台</span>
+                    </a>
+                    <a href="https://www.coursera.org" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#0056d2,#3385ff);">C</div>
+                        <span class="link-name">Coursera</span><span class="link-desc">在线课程</span>
+                    </a>
+                    <a href="https://www.khanacademy.org" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#14bf96,#4dd9b8);">K</div>
+                        <span class="link-name">可汗学院</span><span class="link-desc">免费教育</span>
+                    </a>
+                    <a href="https://www.bbc.co.uk/iplayer" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">BBC</div>
+                        <span class="link-name">BBC</span><span class="link-desc">英国广播</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 电视直播 -->
+        <div id="tv" class="section">
+            <div class="category">
+                <div class="category-title">央视直播频道</div>
+                <div class="links-grid">
+                    <a href="https://tv.cctv.com/live/cctv1/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C1</div>
+                        <span class="link-name">CCTV-1</span><span class="link-desc">综合</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv2/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C2</div>
+                        <span class="link-name">CCTV-2</span><span class="link-desc">财经</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv3/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C3</div>
+                        <span class="link-name">CCTV-3</span><span class="link-desc">综艺</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv4/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C4</div>
+                        <span class="link-name">CCTV-4</span><span class="link-desc">国际</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv5/" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C5</div>
+                        <span class="link-name">CCTV-5</span><span class="link-desc">体育</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv5plus/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C5+</div>
+                        <span class="link-name">CCTV-5+</span><span class="link-desc">赛事</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv6/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C6</div>
+                        <span class="link-name">CCTV-6</span><span class="link-desc">电影</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv8/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C8</div>
+                        <span class="link-name">CCTV-8</span><span class="link-desc">电视剧</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv9/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C9</div>
+                        <span class="link-name">CCTV-9</span><span class="link-desc">纪录</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv13/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C13</div>
+                        <span class="link-name">CCTV-13</span><span class="link-desc">新闻</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv14/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C14</div>
+                        <span class="link-name">CCTV-14</span><span class="link-desc">少儿</span>
+                    </a>
+                    <a href="https://tv.cctv.com/live/cctv16/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C16</div>
+                        <span class="link-name">CCTV-16</span><span class="link-desc">奥运</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">卫视频道</div>
+                <div class="links-grid">
+                    <a href="https://www.mgtv.com/live/" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">湖</div>
+                        <span class="link-name">湖南卫视</span><span class="link-desc">综艺之王</span>
+                    </a>
+                    <a href="https://www.zjstv.com/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">浙</div>
+                        <span class="link-name">浙江卫视</span><span class="link-desc">中国蓝</span>
+                    </a>
+                    <a href="https://www.jstv.com/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">江</div>
+                        <span class="link-name">江苏卫视</span><span class="link-desc">幸福中国</span>
+                    </a>
+                    <a href="https://www.dragontv.cn/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">东</div>
+                        <span class="link-name">东方卫视</span><span class="link-desc">上海</span>
+                    </a>
+                    <a href="https://www.brtn.cn/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">北</div>
+                        <span class="link-name">北京卫视</span><span class="link-desc">首都</span>
+                    </a>
+                    <a href="https://www.iqilu.com/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">鲁</div>
+                        <span class="link-name">山东卫视</span><span class="link-desc">齐鲁</span>
+                    </a>
+                    <a href="https://www.tjtv.com.cn/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">津</div>
+                        <span class="link-name">天津卫视</span><span class="link-desc">天津</span>
+                    </a>
+                    <a href="https://www.gdtv.cn/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">粤</div>
+                        <span class="link-name">广东卫视</span><span class="link-desc">岭南</span>
+                    </a>
+                    <a href="https://www.ahtv.cn/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">皖</div>
+                        <span class="link-name">安徽卫视</span><span class="link-desc">安徽</span>
+                    </a>
+                    <a href="https://www.sctv.com/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">川</div>
+                        <span class="link-name">四川卫视</span><span class="link-desc">天府</span>
+                    </a>
+                    <a href="https://www.cqtv.cn/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">渝</div>
+                        <span class="link-name">重庆卫视</span><span class="link-desc">山城</span>
+                    </a>
+                    <a href="https://www.hbtv.com.cn/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">鄂</div>
+                        <span class="link-name">湖北卫视</span><span class="link-desc">荆楚</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">港澳台电视</div>
+                <div class="links-grid">
+                    <a href="https://www.tdm.com.mo/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">澳</div>
+                        <span class="link-name">澳视澳门</span><span class="link-desc">澳门</span>
+                    </a>
+                    <a href="https://www.tvb.com/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">TV</div>
+                        <span class="link-name">TVB</span><span class="link-desc">香港</span>
+                    </a>
+                    <a href="https://www.rthk.hk/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">RTH</div>
+                        <span class="link-name">香港电台</span><span class="link-desc">香港</span>
+                    </a>
+                    <a href="https://www.ifeng.com/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">凤</div>
+                        <span class="link-name">凤凰卫视</span><span class="link-desc">香港</span>
+                    </a>
+                    <a href="https://www.ctv.com.tw/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">中</div>
+                        <span class="link-name">台湾中视</span><span class="link-desc">台湾</span>
+                    </a>
+                    <a href="https://www.ttv.com.tw/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">台</div>
+                        <span class="link-name">台湾台视</span><span class="link-desc">台湾</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">国际新闻频道</div>
+                <div class="links-grid">
+                    <a href="https://www.bbc.com/news" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">BBC</div>
+                        <span class="link-name">BBC新闻</span><span class="link-desc">英国</span>
+                    </a>
+                    <a href="https://www.cnn.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">CNN</div>
+                        <span class="link-name">CNN</span><span class="link-desc">美国</span>
+                    </a>
+                    <a href="https://www.aljazeera.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">半岛</div>
+                        <span class="link-name">半岛电视</span><span class="link-desc">卡塔尔</span>
+                    </a>
+                    <a href="https://www.france24.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00008b,#4169e1);">F24</div>
+                        <span class="link-name">France24</span><span class="link-desc">法国</span>
+                    </a>
+                    <a href="https://www.nhk.or.jp" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">NHK</div>
+                        <span class="link-name">NHK日本</span><span class="link-desc">日本</span>
+                    </a>
+                    <a href="https://www.rt.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">RT</div>
+                        <span class="link-name">RT今日</span><span class="link-desc">俄罗斯</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 音乐音频 -->
+        <div id="music" class="section">
+            <div class="category">
+                <div class="category-title">音乐平台</div>
+                <div class="links-grid">
+                    <a href="https://music.163.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c20c0c,#e62e2e);">网</div>
+                        <span class="link-name">网易云音乐</span><span class="link-desc">音乐社区</span>
+                    </a>
+                    <a href="https://y.qq.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#31c27c,#5dd69a);">Q</div>
+                        <span class="link-name">QQ音乐</span><span class="link-desc">海量曲库</span>
+                    </a>
+                    <a href="https://www.kugou.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a9ff,#33beff);">酷</div>
+                        <span class="link-name">酷狗音乐</span><span class="link-desc">音乐播放</span>
+                    </a>
+                    <a href="https://www.kuwo.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">我</div>
+                        <span class="link-name">酷我音乐</span><span class="link-desc">音乐盒</span>
+                    </a>
+                    <a href="https://music.apple.com/cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#fa243c,#ff5c70);">♫</div>
+                        <span class="link-name">Apple Music</span><span class="link-desc">苹果音乐</span>
+                    </a>
+                    <a href="https://open.spotify.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1db954,#4dd97a);">S</div>
+                        <span class="link-name">Spotify</span><span class="link-desc">全球音乐</span>
+                    </a>
+                    <a href="https://music.youtube.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0000,#ff4d4d);">Y</div>
+                        <span class="link-name">YouTube Music</span><span class="link-desc">视频音乐</span>
+                    </a>
+                    <a href="https://soundcloud.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff5500,#ff7a33);">☁</div>
+                        <span class="link-name">SoundCloud</span><span class="link-desc">独立音乐</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">播客/有声书</div>
+                <div class="links-grid">
+                    <a href="https://www.ximalaya.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">喜</div>
+                        <span class="link-name">喜马拉雅</span><span class="link-desc">音频平台</span>
+                    </a>
+                    <a href="https://www.qingting.fm" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00bcd4,#33d1e6);">蜻</div>
+                        <span class="link-name">蜻蜓FM</span><span class="link-desc">广播电台</span>
+                    </a>
+                    <a href="https://www.lizhi.fm" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#e91e63,#ff4d8a);">荔</div>
+                        <span class="link-name">荔枝FM</span><span class="link-desc">声音社区</span>
+                    </a>
+                    <a href="https://podcasts.apple.com/cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#9933ff,#b366ff);">P</div>
+                        <span class="link-name">Apple播客</span><span class="link-desc">播客平台</span>
+                    </a>
+                    <a href="https://www.audible.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#f7991c,#ffb84d);">A</div>
+                        <span class="link-name">Audible</span><span class="link-desc">有声书</span>
+                    </a>
+                    <a href="https://castbox.fm" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00bfa5,#33d9c2);">C</div>
+                        <span class="link-name">Castbox</span><span class="link-desc">播客应用</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">K歌娱乐</div>
+                <div class="links-grid">
+                    <a href="https://kg.qq.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">全</div>
+                        <span class="link-name">全民K歌</span><span class="link-desc">腾讯K歌</span>
+                    </a>
+                    <a href="https://www.changba.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff4757,#ff6b7a);">唱</div>
+                        <span class="link-name">唱吧</span><span class="link-desc">手机KTV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 短视频 -->
+        <div id="short" class="section">
+            <div class="category">
+                <div class="category-title">短视频平台</div>
+                <div class="links-grid">
+                    <a href="https://www.douyin.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">抖</div>
+                        <span class="link-name">抖音</span><span class="link-desc">记录美好生活</span>
+                    </a>
+                    <a href="https://www.kuaishou.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">快</div>
+                        <span class="link-name">快手</span><span class="link-desc">拥抱每一种生活</span>
+                    </a>
+                    <a href="https://www.xiaohongshu.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff2442,#ff5c70);">红</div>
+                        <span class="link-name">小红书</span><span class="link-desc">标记我的生活</span>
+                    </a>
+                    <a href="https://weishi.qq.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">微</div>
+                        <span class="link-name">微视</span><span class="link-desc">腾讯短视频</span>
+                    </a>
+                    <a href="https://www.ixigua.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#f04142,#ff6b6b);">西</div>
+                        <span class="link-name">西瓜视频</span><span class="link-desc">字节视频</span>
+                    </a>
+                    <a href="https://haokan.baidu.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">好</div>
+                        <span class="link-name">好看视频</span><span class="link-desc">百度视频</span>
+                    </a>
+                    <a href="https://www.tiktok.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">T</div>
+                        <span class="link-name">TikTok</span><span class="link-desc">国际版抖音</span>
+                    </a>
+                    <a href="https://www.instagram.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">I</div>
+                        <span class="link-name">Instagram</span><span class="link-desc">图片社交</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">短视频工具</div>
+                <div class="links-grid">
+                    <a href="https://www.capcut.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">剪</div>
+                        <span class="link-name">剪映</span><span class="link-desc">抖音剪辑</span>
+                    </a>
+                    <a href="https://www.meipai.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">美</div>
+                        <span class="link-name">美拍</span><span class="link-desc">美图出品</span>
+                    </a>
+                    <a href="https://inshot.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">In</div>
+                        <span class="link-name">InShot</span><span class="link-desc">视频编辑</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 直播 -->
+        <div id="live" class="section">
+            <div class="category">
+                <div class="category-title">游戏直播</div>
+                <div class="links-grid">
+                    <a href="https://www.huya.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">虎</div>
+                        <span class="link-name">虎牙直播</span><span class="link-desc">游戏直播</span>
+                    </a>
+                    <a href="https://www.douyu.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">鱼</div>
+                        <span class="link-name">斗鱼直播</span><span class="link-desc">游戏直播</span>
+                    </a>
+                    <a href="https://live.bilibili.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#fb7299,#ff85ad);">B</div>
+                        <span class="link-name">B站直播</span><span class="link-desc">弹幕直播</span>
+                    </a>
+                    <a href="https://www.yy.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">Y</div>
+                        <span class="link-name">YY直播</span><span class="link-desc">语音直播</span>
+                    </a>
+                    <a href="https://www.twitch.tv" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#9146ff,#b47aff);">T</div>
+                        <span class="link-name">Twitch</span><span class="link-desc">国外游戏</span>
+                    </a>
+                    <a href="https://www.nimo.tv" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00d1c1,#33e6d6);">N</div>
+                        <span class="link-name">NimoTV</span><span class="link-desc">海外直播</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">电商/娱乐直播</div>
+                <div class="links-grid">
+                    <a href="https://live.taobao.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">淘</div>
+                        <span class="link-name">淘宝直播</span><span class="link-desc">电商直播</span>
+                    </a>
+                    <a href="https://live.jd.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#e4393c,#ff6b6b);">京</div>
+                        <span class="link-name">京东直播</span><span class="link-desc">京东直播</span>
+                    </a>
+                    <a href="https://live.douyin.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">抖</div>
+                        <span class="link-name">抖音直播</span><span class="link-desc">抖音直播</span>
+                    </a>
+                    <a href="https://live.kuaishou.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">快</div>
+                        <span class="link-name">快手直播</span><span class="link-desc">快手直播</span>
+                    </a>
+                    <a href="https://www.huajiao.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">花</div>
+                        <span class="link-name">花椒直播</span><span class="link-desc">娱乐直播</span>
+                    </a>
+                    <a href="https://www.inke.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0050,#ff4d7a);">映</div>
+                        <span class="link-name">映客直播</span><span class="link-desc">移动直播</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 影视追剧 -->
+        <div id="movie" class="section">
+            <div class="category">
+                <div class="category-title">在线影视</div>
+                <div class="links-grid">
+                    <a href="https://www.iqiyi.com/dianshiju/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">爱</div>
+                        <span class="link-name">爱奇艺剧集</span><span class="link-desc">电视剧</span>
+                    </a>
+                    <a href="https://v.qq.com/tv/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">腾</div>
+                        <span class="link-name">腾讯电视剧</span><span class="link-desc">电视剧</span>
+                    </a>
+                    <a href="https://www.youku.com/show/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1e90ff,#4da6ff);">优</div>
+                        <span class="link-name">优酷剧集</span><span class="link-desc">电视剧</span>
+                    </a>
+                    <a href="https://www.mgtv.com/tv/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">芒</div>
+                        <span class="link-name">芒果剧集</span><span class="link-desc">电视剧</span>
+                    </a>
+                    <a href="https://www.bilibili.com/drama/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#fb7299,#ff85ad);">B</div>
+                        <span class="link-name">B站番剧</span><span class="link-desc">动漫</span>
+                    </a>
+                    <a href="https://www.netflix.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#e50914,#ff1a25);">N</div>
+                        <span class="link-name">Netflix</span><span class="link-desc">美剧韩剧</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">影视资讯</div>
+                <div class="links-grid">
+                    <a href="https://movie.douban.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00b51d,#33d14d);">豆</div>
+                        <span class="link-name">豆瓣电影</span><span class="link-desc">评分评论</span>
+                    </a>
+                    <a href="https://www.imdb.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#f5c518,#ffe066);color:#000;">IM</div>
+                        <span class="link-name">IMDb</span><span class="link-desc">全球电影</span>
+                    </a>
+                    <a href="https://www.rottentomatoes.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#fa320a,#ff6b4d);">RT</div>
+                        <span class="link-name">烂番茄</span><span class="link-desc">影评网站</span>
+                    </a>
+                    <a href="https://www.mtime.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1e90ff,#4da6ff);">时</div>
+                        <span class="link-name">时光网</span><span class="link-desc">电影资讯</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">字幕资源</div>
+                <div class="links-grid">
+                    <a href="https://subhd.tv" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">S</div>
+                        <span class="link-name">SubHD</span><span class="link-desc">字幕下载</span>
+                    </a>
+                    <a href="https://www.opensubtitles.org" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#f4c430,#ffe066);color:#000;">OS</div>
+                        <span class="link-name">OpenSub</span><span class="link-desc">开源字幕</span>
+                    </a>
+                    <a href="https://subscene.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1e90ff,#4da6ff);">SC</div>
+                        <span class="link-name">Subscene</span><span class="link-desc">字幕库</span>
+                    </a>
+                    <a href="https://www.assrt.net" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">A</div>
+                        <span class="link-name">射手网</span><span class="link-desc">字幕下载</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 游戏电竞 -->
+        <div id="game" class="section">
+            <div class="category">
+                <div class="category-title">游戏平台</div>
+                <div class="links-grid">
+                    <a href="https://store.steampowered.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1b2838,#2a475e);">S</div>
+                        <span class="link-name">Steam</span><span class="link-desc">游戏商店</span>
+                    </a>
+                    <a href="https://www.epicgames.com/store" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">E</div>
+                        <span class="link-name">Epic</span><span class="link-desc">免费游戏</span>
+                    </a>
+                    <a href="https://www.xbox.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#107c10,#33a33d);">X</div>
+                        <span class="link-name">Xbox</span><span class="link-desc">微软游戏</span>
+                    </a>
+                    <a href="https://www.playstation.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#003791,#3366cc);">PS</div>
+                        <span class="link-name">PlayStation</span><span class="link-desc">索尼游戏</span>
+                    </a>
+                    <a href="https://www.nintendo.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#e60012,#ff4d5c);">N</div>
+                        <span class="link-name">Nintendo</span><span class="link-desc">任天堂</span>
+                    </a>
+                    <a href="https://www.taptap.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#14b9c8,#4dd1db);">T</div>
+                        <span class="link-name">TapTap</span><span class="link-desc">手游社区</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">电竞赛事</div>
+                <div class="links-grid">
+                    <a href="https://lpl.qq.com" class="link-card tag-hot" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#c89b3c,#e6c26b);">L</div>
+                        <span class="link-name">LPL</span><span class="link-desc">英雄联盟</span>
+                    </a>
+                    <a href="https://www.dota2.com.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0000,#ff4d4d);">D2</div>
+                        <span class="link-name">DOTA2</span><span class="link-desc">刀塔2</span>
+                    </a>
+                    <a href="https://www.csgo.com.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#f5af0d,#ffd14d);color:#000;">CS</div>
+                        <span class="link-name">CS:GO</span><span class="link-desc">反恐精英</span>
+                    </a>
+                    <a href="https://pvp.qq.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">王</div>
+                        <span class="link-name">王者荣耀</span><span class="link-desc">腾讯手游</span>
+                    </a>
+                    <a href="https://www.ign.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#bf1313,#e64d4d);">IGN</div>
+                        <span class="link-name">IGN</span><span class="link-desc">游戏评测</span>
+                    </a>
+                    <a href="https://www.gamespot.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">GS</div>
+                        <span class="link-name">GameSpot</span><span class="link-desc">游戏资讯</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">游戏社区</div>
+                <div class="links-grid">
+                    <a href="https://bbs.nga.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">N</div>
+                        <span class="link-name">NGA</span><span class="link-desc">玩家社区</span>
+                    </a>
+                    <a href="https://www.gcores.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">G</div>
+                        <span class="link-name">机核网</span><span class="link-desc">游戏文化</span>
+                    </a>
+                    <a href="https://www.gamersky.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">游</div>
+                        <span class="link-name">游民星空</span><span class="link-desc">游戏资讯</span>
+                    </a>
+                    <a href="https://steamdb.info" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1b2838,#2a475e);">DB</div>
+                        <span class="link-name">SteamDB</span><span class="link-desc">Steam数据</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 创作工具 -->
+        <div id="tool" class="section">
+            <div class="category">
+                <div class="category-title">视频剪辑</div>
+                <div class="links-grid">
+                    <a href="https://www.capcut.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">剪</div>
+                        <span class="link-name">剪映</span><span class="link-desc">抖音剪辑</span>
+                    </a>
+                    <a href="https://www.adobe.com/products/premiere.html" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#9999ff,#b8b8ff);color:#000;">Pr</div>
+                        <span class="link-name">Premiere</span><span class="link-desc">专业剪辑</span>
+                    </a>
+                    <a href="https://www.adobe.com/products/aftereffects.html" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#9999ff,#b8b8ff);color:#000;">Ae</div>
+                        <span class="link-name">After Effects</span><span class="link-desc">特效制作</span>
+                    </a>
+                    <a href="https://www.blackmagicdesign.com/products/davinciresolve" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">Da</div>
+                        <span class="link-name">DaVinci</span><span class="link-desc">调色剪辑</span>
+                    </a>
+                    <a href="https://www.apple.com/final-cut-pro/" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#1d1d1f,#4d4d52);">Fc</div>
+                        <span class="link-name">Final Cut</span><span class="link-desc">苹果剪辑</span>
+                    </a>
+                    <a href="https://filmora.wondershare.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">F</div>
+                        <span class="link-name">万兴喵影</span><span class="link-desc">国产剪辑</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">设计/图片</div>
+                <div class="links-grid">
+                    <a href="https://www.adobe.com/products/photoshop.html" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#31a8ff,#66c2ff);color:#000;">Ps</div>
+                        <span class="link-name">Photoshop</span><span class="link-desc">图像处理</span>
+                    </a>
+                    <a href="https://www.figma.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#f24e1e,#ff7a52);">F</div>
+                        <span class="link-name">Figma</span><span class="link-desc">UI设计</span>
+                    </a>
+                    <a href="https://www.canva.cn" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00c4cc,#33e6ed);">C</div>
+                        <span class="link-name">Canva</span><span class="link-desc">在线设计</span>
+                    </a>
+                    <a href="https://www.photopea.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#31a8ff,#66c2ff);color:#000;">Pp</div>
+                        <span class="link-name">Photopea</span><span class="link-desc">在线PS</span>
+                    </a>
+                    <a href="https://www.remove.bg" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">R</div>
+                        <span class="link-name">Remove.bg</span><span class="link-desc">抠图工具</span>
+                    </a>
+                    <a href="https://unsplash.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">U</div>
+                        <span class="link-name">Unsplash</span><span class="link-desc">免费图片</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">音频/特效</div>
+                <div class="links-grid">
+                    <a href="https://www.audacityteam.org" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">Au</div>
+                        <span class="link-name">Audacity</span><span class="link-desc">免费音频</span>
+                    </a>
+                    <a href="https://www.adobe.com/products/audition.html" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00e4bb,#4dffd6);color:#000;">Au</div>
+                        <span class="link-name">Audition</span><span class="link-desc">专业音频</span>
+                    </a>
+                    <a href="https://freesound.org" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">FS</div>
+                        <span class="link-name">Freesound</span><span class="link-desc">免费音效</span>
+                    </a>
+                    <a href="https://mixkit.co" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">M</div>
+                        <span class="link-name">Mixkit</span><span class="link-desc">免费素材</span>
+                    </a>
+                    <a href="https://www.videvo.net" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">V</div>
+                        <span class="link-name">Videvo</span><span class="link-desc">视频素材</span>
+                    </a>
+                    <a href="https://motionarray.com" class="link-card" target="_blank">
+                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0050,#ff4d7a);">MA</div>
+                        <span class="link-name">Motion Array</span><span class="link-desc">AE模板</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2012-2026 看电视 tvcn.org 直播·视频·电视·音乐·有声·游戏·体育·纪录片·娱乐 <a href="https://netcn.org/" target="_blank">最简上网导航</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        function search() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            if (!query) return;
+            const links = document.querySelectorAll('.link-card');
+            let found = false;
+            links.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                link.style.display = text.includes(query) ? 'flex' : 'none';
+                if (text.includes(query)) found = true;
+            });
+            if (!found) {
+                alert('未找到相关内容');
+                links.forEach(l => l.style.display = 'flex');
+            }
+        }
+        document.getElementById('searchInput').addEventListener('keypress', e => {
+            if (e.key === 'Enter') search();
+        });
+
+        // 主题切换功能
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // 加载保存的主题
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+    </script>
+</body>
+</html>
