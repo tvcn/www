@@ -27,860 +27,702 @@
             <button class="nav-tab" onclick="showSection('movie')">影视追剧</button>
             <button class="nav-tab" onclick="showSection('game')">游戏电竞</button>
             <button class="nav-tab" onclick="showSection('tool')">创作工具</button>
+            <button class="nav-tab" onclick="showSection('edu')">学习教育</button>
         </div>
 
         <!-- 视频平台 -->
-        <div id="video" class="section active">
-            <div class="category">
-                <div class="category-title">综合视频平台</div>
-                <div class="links-grid">
-                    <a href="https://www.youku.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1e90ff,#00a0e9);">优</div>
-                        <span class="link-name">优酷</span><span class="link-desc">综合视频</span>
-                    </a>
-                    <a href="https://www.iqiyi.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#00d166);">爱</div>
-                        <span class="link-name">爱奇艺</span><span class="link-desc">综合视频</span>
-                    </a>
-                    <a href="https://v.qq.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#00c3ff);">腾</div>
-                        <span class="link-name">腾讯视频</span><span class="link-desc">综合视频</span>
-                    </a>
-                    <a href="https://www.mgtv.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">芒</div>
-                        <span class="link-name">芒果TV</span><span class="link-desc">综艺娱乐</span>
-                    </a>
-                    <a href="https://www.bilibili.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#fb7299,#ff85ad);">B</div>
-                        <span class="link-name">哔哩哔哩</span><span class="link-desc">弹幕视频</span>
-                    </a>
-                    <a href="https://www.pptv.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">P</div>
-                        <span class="link-name">PPTV</span><span class="link-desc">体育视频</span>
-                    </a>
-                    <a href="https://www.le.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#f54343,#ff6b6b);">乐</div>
-                        <span class="link-name">乐视视频</span><span class="link-desc">综合视频</span>
-                    </a>
-                    <a href="https://tv.sohu.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff8500,#ffa94d);">搜</div>
-                        <span class="link-name">搜狐视频</span><span class="link-desc">美剧资源</span>
-                    </a>
-                    <a href="https://www.1905.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">19</div>
-                        <span class="link-name">1905电影</span><span class="link-desc">电影频道</span>
-                    </a>
-                    <a href="https://www.cctv.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">央</div>
-                        <span class="link-name">央视网</span><span class="link-desc">官方视频</span>
-                    </a>
-                    <a href="https://www.cgtn.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">CG</div>
-                        <span class="link-name">CGTN</span><span class="link-desc">国际频道</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">直</div>
-                        <span class="link-name">央视直播</span><span class="link-desc">在线直播</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">国外视频平台</div>
-                <div class="links-grid">
-                    <a href="https://www.youtube.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0000,#ff4d4d);">▶</div>
-                        <span class="link-name">YouTube</span><span class="link-desc">全球最大</span>
-                    </a>
-                    <a href="https://www.netflix.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#e50914,#ff1a25);">N</div>
-                        <span class="link-name">Netflix</span><span class="link-desc">流媒体巨头</span>
-                    </a>
-                    <a href="https://www.hulu.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1ce783,#4dffa3);">H</div>
-                        <span class="link-name">Hulu</span><span class="link-desc">美国视频</span>
-                    </a>
-                    <a href="https://www.disneyplus.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#113ccf,#3366ff);">D+</div>
-                        <span class="link-name">Disney+</span><span class="link-desc">迪士尼</span>
-                    </a>
-                    <a href="https://www.max.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#9900ff,#b84dff);">M</div>
-                        <span class="link-name">Max</span><span class="link-desc">HBO新品牌</span>
-                    </a>
-                    <a href="https://www.primevideo.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a8e1,#33ccff);">P</div>
-                        <span class="link-name">Prime Video</span><span class="link-desc">亚马逊</span>
-                    </a>
-                    <a href="https://vimeo.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1ab7ea,#4dcfff);">V</div>
-                        <span class="link-name">Vimeo</span><span class="link-desc">高清视频</span>
-                    </a>
-                    <a href="https://www.dailymotion.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00d1c1,#33e6d6);">D</div>
-                        <span class="link-name">Dailymotion</span><span class="link-desc">法国视频</span>
-                    </a>
-                    <a href="https://www.apple.com/apple-tv-plus/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">A</div>
-                        <span class="link-name">Apple TV+</span><span class="link-desc">苹果原创</span>
-                    </a>
-                    <a href="https://www.peacocktv.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00d1c1,#33e6d6);">P</div>
-                        <span class="link-name">Peacock</span><span class="link-desc">NBC环球</span>
-                    </a>
-                    <a href="https://www.paramountplus.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#0064ff,#3385ff);">P+</div>
-                        <span class="link-name">Paramount+</span><span class="link-desc">派拉蒙</span>
-                    </a>
-                    <a href="https://www.crunchyroll.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#f47521,#ff9a4d);">C</div>
-                        <span class="link-name">Crunchyroll</span><span class="link-desc">动漫平台</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">体育视频</div>
-                <div class="links-grid">
-                    <a href="https://sports.qq.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">腾</div>
-                        <span class="link-name">腾讯体育</span><span class="link-desc">NBA英超</span>
-                    </a>
-                    <a href="https://sports.iqiyi.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">爱</div>
-                        <span class="link-name">爱奇艺体育</span><span class="link-desc">足球网球</span>
-                    </a>
-                    <a href="https://www.miguvideo.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#0091ff,#33b5ff);">咪</div>
-                        <span class="link-name">咪咕视频</span><span class="link-desc">体育赛事</span>
-                    </a>
-                    <a href="https://www.espn.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">E</div>
-                        <span class="link-name">ESPN</span><span class="link-desc">体育巨头</span>
-                    </a>
-                    <a href="https://www.nba.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1d428a,#3366cc);">NBA</div>
-                        <span class="link-name">NBA官网</span><span class="link-desc">美国篮球</span>
-                    </a>
-                    <a href="https://www.uefa.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">U</div>
-                        <span class="link-name">欧足联</span><span class="link-desc">欧洲足球</span>
-                    </a>
-                    <a href="https://www.fifa.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#326295,#4d85b8);">F</div>
-                        <span class="link-name">FIFA</span><span class="link-desc">国际足联</span>
-                    </a>
-                    <a href="https://www.dazn.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">D</div>
-                        <span class="link-name">DAZN</span><span class="link-desc">体育直播</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">纪录片/知识</div>
-                <div class="links-grid">
-                    <a href="https://jishi.cctv.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">央</div>
-                        <span class="link-name">央视纪录</span><span class="link-desc">官方纪录</span>
-                    </a>
-                    <a href="https://www.bilibili.com/documentary/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#fb7299,#ff85ad);">B</div>
-                        <span class="link-name">B站纪录片</span><span class="link-desc">优质纪录</span>
-                    </a>
-                    <a href="https://www.discovery.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#0064ff,#3385ff);">D</div>
-                        <span class="link-name">Discovery</span><span class="link-desc">探索频道</span>
-                    </a>
-                    <a href="https://www.nationalgeographic.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ffcc00,#ffe066);color:#000;">NG</div>
-                        <span class="link-name">国家地理</span><span class="link-desc">自然人文</span>
-                    </a>
-                    <a href="https://www.ted.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#e62b1e,#ff5c4d);">T</div>
-                        <span class="link-name">TED</span><span class="link-desc">演讲平台</span>
-                    </a>
-                    <a href="https://www.coursera.org" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#0056d2,#3385ff);">C</div>
-                        <span class="link-name">Coursera</span><span class="link-desc">在线课程</span>
-                    </a>
-                    <a href="https://www.khanacademy.org" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#14bf96,#4dd9b8);">K</div>
-                        <span class="link-name">可汗学院</span><span class="link-desc">免费教育</span>
-                    </a>
-                    <a href="https://www.bbc.co.uk/iplayer" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">BBC</div>
-                        <span class="link-name">BBC</span><span class="link-desc">英国广播</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="video" class="section active"></div>
 
         <!-- 电视直播 -->
-        <div id="tv" class="section">
-            <div class="category">
-                <div class="category-title">央视直播频道</div>
-                <div class="links-grid">
-                    <a href="https://tv.cctv.com/live/cctv1/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C1</div>
-                        <span class="link-name">CCTV-1</span><span class="link-desc">综合</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv2/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C2</div>
-                        <span class="link-name">CCTV-2</span><span class="link-desc">财经</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv3/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C3</div>
-                        <span class="link-name">CCTV-3</span><span class="link-desc">综艺</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv4/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C4</div>
-                        <span class="link-name">CCTV-4</span><span class="link-desc">国际</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv5/" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C5</div>
-                        <span class="link-name">CCTV-5</span><span class="link-desc">体育</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv5plus/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C5+</div>
-                        <span class="link-name">CCTV-5+</span><span class="link-desc">赛事</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv6/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C6</div>
-                        <span class="link-name">CCTV-6</span><span class="link-desc">电影</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv8/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C8</div>
-                        <span class="link-name">CCTV-8</span><span class="link-desc">电视剧</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv9/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C9</div>
-                        <span class="link-name">CCTV-9</span><span class="link-desc">纪录</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv13/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C13</div>
-                        <span class="link-name">CCTV-13</span><span class="link-desc">新闻</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv14/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C14</div>
-                        <span class="link-name">CCTV-14</span><span class="link-desc">少儿</span>
-                    </a>
-                    <a href="https://tv.cctv.com/live/cctv16/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">C16</div>
-                        <span class="link-name">CCTV-16</span><span class="link-desc">奥运</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">卫视频道</div>
-                <div class="links-grid">
-                    <a href="https://www.mgtv.com/live/" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">湖</div>
-                        <span class="link-name">湖南卫视</span><span class="link-desc">综艺之王</span>
-                    </a>
-                    <a href="https://www.zjstv.com/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">浙</div>
-                        <span class="link-name">浙江卫视</span><span class="link-desc">中国蓝</span>
-                    </a>
-                    <a href="https://www.jstv.com/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">江</div>
-                        <span class="link-name">江苏卫视</span><span class="link-desc">幸福中国</span>
-                    </a>
-                    <a href="https://www.dragontv.cn/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">东</div>
-                        <span class="link-name">东方卫视</span><span class="link-desc">上海</span>
-                    </a>
-                    <a href="https://www.brtn.cn/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">北</div>
-                        <span class="link-name">北京卫视</span><span class="link-desc">首都</span>
-                    </a>
-                    <a href="https://www.iqilu.com/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">鲁</div>
-                        <span class="link-name">山东卫视</span><span class="link-desc">齐鲁</span>
-                    </a>
-                    <a href="https://www.tjtv.com.cn/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">津</div>
-                        <span class="link-name">天津卫视</span><span class="link-desc">天津</span>
-                    </a>
-                    <a href="https://www.gdtv.cn/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">粤</div>
-                        <span class="link-name">广东卫视</span><span class="link-desc">岭南</span>
-                    </a>
-                    <a href="https://www.ahtv.cn/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">皖</div>
-                        <span class="link-name">安徽卫视</span><span class="link-desc">安徽</span>
-                    </a>
-                    <a href="https://www.sctv.com/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">川</div>
-                        <span class="link-name">四川卫视</span><span class="link-desc">天府</span>
-                    </a>
-                    <a href="https://www.cqtv.cn/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">渝</div>
-                        <span class="link-name">重庆卫视</span><span class="link-desc">山城</span>
-                    </a>
-                    <a href="https://www.hbtv.com.cn/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">鄂</div>
-                        <span class="link-name">湖北卫视</span><span class="link-desc">荆楚</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">港澳台电视</div>
-                <div class="links-grid">
-                    <a href="https://www.tdm.com.mo/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">澳</div>
-                        <span class="link-name">澳视澳门</span><span class="link-desc">澳门</span>
-                    </a>
-                    <a href="https://www.tvb.com/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">TV</div>
-                        <span class="link-name">TVB</span><span class="link-desc">香港</span>
-                    </a>
-                    <a href="https://www.rthk.hk/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">RTH</div>
-                        <span class="link-name">香港电台</span><span class="link-desc">香港</span>
-                    </a>
-                    <a href="https://www.ifeng.com/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">凤</div>
-                        <span class="link-name">凤凰卫视</span><span class="link-desc">香港</span>
-                    </a>
-                    <a href="https://www.ctv.com.tw/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">中</div>
-                        <span class="link-name">台湾中视</span><span class="link-desc">台湾</span>
-                    </a>
-                    <a href="https://www.ttv.com.tw/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">台</div>
-                        <span class="link-name">台湾台视</span><span class="link-desc">台湾</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">国际新闻频道</div>
-                <div class="links-grid">
-                    <a href="https://www.bbc.com/news" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">BBC</div>
-                        <span class="link-name">BBC新闻</span><span class="link-desc">英国</span>
-                    </a>
-                    <a href="https://www.cnn.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">CNN</div>
-                        <span class="link-name">CNN</span><span class="link-desc">美国</span>
-                    </a>
-                    <a href="https://www.aljazeera.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">半岛</div>
-                        <span class="link-name">半岛电视</span><span class="link-desc">卡塔尔</span>
-                    </a>
-                    <a href="https://www.france24.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00008b,#4169e1);">F24</div>
-                        <span class="link-name">France24</span><span class="link-desc">法国</span>
-                    </a>
-                    <a href="https://www.nhk.or.jp" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">NHK</div>
-                        <span class="link-name">NHK日本</span><span class="link-desc">日本</span>
-                    </a>
-                    <a href="https://www.rt.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c41230,#e62e4c);">RT</div>
-                        <span class="link-name">RT今日</span><span class="link-desc">俄罗斯</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="tv" class="section"></div>
 
         <!-- 音乐音频 -->
-        <div id="music" class="section">
-            <div class="category">
-                <div class="category-title">音乐平台</div>
-                <div class="links-grid">
-                    <a href="https://music.163.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c20c0c,#e62e2e);">网</div>
-                        <span class="link-name">网易云音乐</span><span class="link-desc">音乐社区</span>
-                    </a>
-                    <a href="https://y.qq.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#31c27c,#5dd69a);">Q</div>
-                        <span class="link-name">QQ音乐</span><span class="link-desc">海量曲库</span>
-                    </a>
-                    <a href="https://www.kugou.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a9ff,#33beff);">酷</div>
-                        <span class="link-name">酷狗音乐</span><span class="link-desc">音乐播放</span>
-                    </a>
-                    <a href="https://www.kuwo.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">我</div>
-                        <span class="link-name">酷我音乐</span><span class="link-desc">音乐盒</span>
-                    </a>
-                    <a href="https://music.apple.com/cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#fa243c,#ff5c70);">♫</div>
-                        <span class="link-name">Apple Music</span><span class="link-desc">苹果音乐</span>
-                    </a>
-                    <a href="https://open.spotify.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1db954,#4dd97a);">S</div>
-                        <span class="link-name">Spotify</span><span class="link-desc">全球音乐</span>
-                    </a>
-                    <a href="https://music.youtube.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0000,#ff4d4d);">Y</div>
-                        <span class="link-name">YouTube Music</span><span class="link-desc">视频音乐</span>
-                    </a>
-                    <a href="https://soundcloud.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff5500,#ff7a33);">☁</div>
-                        <span class="link-name">SoundCloud</span><span class="link-desc">独立音乐</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">播客/有声书</div>
-                <div class="links-grid">
-                    <a href="https://www.ximalaya.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">喜</div>
-                        <span class="link-name">喜马拉雅</span><span class="link-desc">音频平台</span>
-                    </a>
-                    <a href="https://www.qingting.fm" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00bcd4,#33d1e6);">蜻</div>
-                        <span class="link-name">蜻蜓FM</span><span class="link-desc">广播电台</span>
-                    </a>
-                    <a href="https://www.lizhi.fm" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#e91e63,#ff4d8a);">荔</div>
-                        <span class="link-name">荔枝FM</span><span class="link-desc">声音社区</span>
-                    </a>
-                    <a href="https://podcasts.apple.com/cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#9933ff,#b366ff);">P</div>
-                        <span class="link-name">Apple播客</span><span class="link-desc">播客平台</span>
-                    </a>
-                    <a href="https://www.audible.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#f7991c,#ffb84d);">A</div>
-                        <span class="link-name">Audible</span><span class="link-desc">有声书</span>
-                    </a>
-                    <a href="https://castbox.fm" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00bfa5,#33d9c2);">C</div>
-                        <span class="link-name">Castbox</span><span class="link-desc">播客应用</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">K歌娱乐</div>
-                <div class="links-grid">
-                    <a href="https://kg.qq.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">全</div>
-                        <span class="link-name">全民K歌</span><span class="link-desc">腾讯K歌</span>
-                    </a>
-                    <a href="https://www.changba.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff4757,#ff6b7a);">唱</div>
-                        <span class="link-name">唱吧</span><span class="link-desc">手机KTV</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="music" class="section"></div>
 
         <!-- 短视频 -->
-        <div id="short" class="section">
-            <div class="category">
-                <div class="category-title">短视频平台</div>
-                <div class="links-grid">
-                    <a href="https://www.douyin.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">抖</div>
-                        <span class="link-name">抖音</span><span class="link-desc">记录美好生活</span>
-                    </a>
-                    <a href="https://www.kuaishou.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">快</div>
-                        <span class="link-name">快手</span><span class="link-desc">拥抱每一种生活</span>
-                    </a>
-                    <a href="https://www.xiaohongshu.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff2442,#ff5c70);">红</div>
-                        <span class="link-name">小红书</span><span class="link-desc">标记我的生活</span>
-                    </a>
-                    <a href="https://weishi.qq.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">微</div>
-                        <span class="link-name">微视</span><span class="link-desc">腾讯短视频</span>
-                    </a>
-                    <a href="https://www.ixigua.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#f04142,#ff6b6b);">西</div>
-                        <span class="link-name">西瓜视频</span><span class="link-desc">字节视频</span>
-                    </a>
-                    <a href="https://haokan.baidu.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">好</div>
-                        <span class="link-name">好看视频</span><span class="link-desc">百度视频</span>
-                    </a>
-                    <a href="https://www.tiktok.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">T</div>
-                        <span class="link-name">TikTok</span><span class="link-desc">国际版抖音</span>
-                    </a>
-                    <a href="https://www.instagram.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">I</div>
-                        <span class="link-name">Instagram</span><span class="link-desc">图片社交</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">短视频工具</div>
-                <div class="links-grid">
-                    <a href="https://www.capcut.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">剪</div>
-                        <span class="link-name">剪映</span><span class="link-desc">抖音剪辑</span>
-                    </a>
-                    <a href="https://www.meipai.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">美</div>
-                        <span class="link-name">美拍</span><span class="link-desc">美图出品</span>
-                    </a>
-                    <a href="https://inshot.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">In</div>
-                        <span class="link-name">InShot</span><span class="link-desc">视频编辑</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="short" class="section"></div>
 
         <!-- 直播 -->
-        <div id="live" class="section">
-            <div class="category">
-                <div class="category-title">游戏直播</div>
-                <div class="links-grid">
-                    <a href="https://www.huya.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">虎</div>
-                        <span class="link-name">虎牙直播</span><span class="link-desc">游戏直播</span>
-                    </a>
-                    <a href="https://www.douyu.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">鱼</div>
-                        <span class="link-name">斗鱼直播</span><span class="link-desc">游戏直播</span>
-                    </a>
-                    <a href="https://live.bilibili.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#fb7299,#ff85ad);">B</div>
-                        <span class="link-name">B站直播</span><span class="link-desc">弹幕直播</span>
-                    </a>
-                    <a href="https://www.yy.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">Y</div>
-                        <span class="link-name">YY直播</span><span class="link-desc">语音直播</span>
-                    </a>
-                    <a href="https://www.twitch.tv" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#9146ff,#b47aff);">T</div>
-                        <span class="link-name">Twitch</span><span class="link-desc">国外游戏</span>
-                    </a>
-                    <a href="https://www.nimo.tv" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00d1c1,#33e6d6);">N</div>
-                        <span class="link-name">NimoTV</span><span class="link-desc">海外直播</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">电商/娱乐直播</div>
-                <div class="links-grid">
-                    <a href="https://live.taobao.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">淘</div>
-                        <span class="link-name">淘宝直播</span><span class="link-desc">电商直播</span>
-                    </a>
-                    <a href="https://live.jd.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#e4393c,#ff6b6b);">京</div>
-                        <span class="link-name">京东直播</span><span class="link-desc">京东直播</span>
-                    </a>
-                    <a href="https://live.douyin.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">抖</div>
-                        <span class="link-name">抖音直播</span><span class="link-desc">抖音直播</span>
-                    </a>
-                    <a href="https://live.kuaishou.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">快</div>
-                        <span class="link-name">快手直播</span><span class="link-desc">快手直播</span>
-                    </a>
-                    <a href="https://www.huajiao.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">花</div>
-                        <span class="link-name">花椒直播</span><span class="link-desc">娱乐直播</span>
-                    </a>
-                    <a href="https://www.inke.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0050,#ff4d7a);">映</div>
-                        <span class="link-name">映客直播</span><span class="link-desc">移动直播</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="live" class="section"></div>
 
         <!-- 影视追剧 -->
-        <div id="movie" class="section">
-            <div class="category">
-                <div class="category-title">在线影视</div>
-                <div class="links-grid">
-                    <a href="https://www.iqiyi.com/dianshiju/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">爱</div>
-                        <span class="link-name">爱奇艺剧集</span><span class="link-desc">电视剧</span>
-                    </a>
-                    <a href="https://v.qq.com/tv/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">腾</div>
-                        <span class="link-name">腾讯电视剧</span><span class="link-desc">电视剧</span>
-                    </a>
-                    <a href="https://www.youku.com/show/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1e90ff,#4da6ff);">优</div>
-                        <span class="link-name">优酷剧集</span><span class="link-desc">电视剧</span>
-                    </a>
-                    <a href="https://www.mgtv.com/tv/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">芒</div>
-                        <span class="link-name">芒果剧集</span><span class="link-desc">电视剧</span>
-                    </a>
-                    <a href="https://www.bilibili.com/drama/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#fb7299,#ff85ad);">B</div>
-                        <span class="link-name">B站番剧</span><span class="link-desc">动漫</span>
-                    </a>
-                    <a href="https://www.netflix.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#e50914,#ff1a25);">N</div>
-                        <span class="link-name">Netflix</span><span class="link-desc">美剧韩剧</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">影视资讯</div>
-                <div class="links-grid">
-                    <a href="https://movie.douban.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00b51d,#33d14d);">豆</div>
-                        <span class="link-name">豆瓣电影</span><span class="link-desc">评分评论</span>
-                    </a>
-                    <a href="https://www.imdb.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#f5c518,#ffe066);color:#000;">IM</div>
-                        <span class="link-name">IMDb</span><span class="link-desc">全球电影</span>
-                    </a>
-                    <a href="https://www.rottentomatoes.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#fa320a,#ff6b4d);">RT</div>
-                        <span class="link-name">烂番茄</span><span class="link-desc">影评网站</span>
-                    </a>
-                    <a href="https://www.mtime.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1e90ff,#4da6ff);">时</div>
-                        <span class="link-name">时光网</span><span class="link-desc">电影资讯</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">字幕资源</div>
-                <div class="links-grid">
-                    <a href="https://subhd.tv" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">S</div>
-                        <span class="link-name">SubHD</span><span class="link-desc">字幕下载</span>
-                    </a>
-                    <a href="https://www.opensubtitles.org" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#f4c430,#ffe066);color:#000;">OS</div>
-                        <span class="link-name">OpenSub</span><span class="link-desc">开源字幕</span>
-                    </a>
-                    <a href="https://subscene.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1e90ff,#4da6ff);">SC</div>
-                        <span class="link-name">Subscene</span><span class="link-desc">字幕库</span>
-                    </a>
-                    <a href="https://www.assrt.net" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">A</div>
-                        <span class="link-name">射手网</span><span class="link-desc">字幕下载</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="movie" class="section"></div>
 
         <!-- 游戏电竞 -->
-        <div id="game" class="section">
-            <div class="category">
-                <div class="category-title">游戏平台</div>
-                <div class="links-grid">
-                    <a href="https://store.steampowered.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1b2838,#2a475e);">S</div>
-                        <span class="link-name">Steam</span><span class="link-desc">游戏商店</span>
-                    </a>
-                    <a href="https://www.epicgames.com/store" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">E</div>
-                        <span class="link-name">Epic</span><span class="link-desc">免费游戏</span>
-                    </a>
-                    <a href="https://www.xbox.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#107c10,#33a33d);">X</div>
-                        <span class="link-name">Xbox</span><span class="link-desc">微软游戏</span>
-                    </a>
-                    <a href="https://www.playstation.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#003791,#3366cc);">PS</div>
-                        <span class="link-name">PlayStation</span><span class="link-desc">索尼游戏</span>
-                    </a>
-                    <a href="https://www.nintendo.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#e60012,#ff4d5c);">N</div>
-                        <span class="link-name">Nintendo</span><span class="link-desc">任天堂</span>
-                    </a>
-                    <a href="https://www.taptap.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#14b9c8,#4dd1db);">T</div>
-                        <span class="link-name">TapTap</span><span class="link-desc">手游社区</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">电竞赛事</div>
-                <div class="links-grid">
-                    <a href="https://lpl.qq.com" class="link-card tag-hot" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#c89b3c,#e6c26b);">L</div>
-                        <span class="link-name">LPL</span><span class="link-desc">英雄联盟</span>
-                    </a>
-                    <a href="https://www.dota2.com.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0000,#ff4d4d);">D2</div>
-                        <span class="link-name">DOTA2</span><span class="link-desc">刀塔2</span>
-                    </a>
-                    <a href="https://www.csgo.com.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#f5af0d,#ffd14d);color:#000;">CS</div>
-                        <span class="link-name">CS:GO</span><span class="link-desc">反恐精英</span>
-                    </a>
-                    <a href="https://pvp.qq.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">王</div>
-                        <span class="link-name">王者荣耀</span><span class="link-desc">腾讯手游</span>
-                    </a>
-                    <a href="https://www.ign.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#bf1313,#e64d4d);">IGN</div>
-                        <span class="link-name">IGN</span><span class="link-desc">游戏评测</span>
-                    </a>
-                    <a href="https://www.gamespot.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">GS</div>
-                        <span class="link-name">GameSpot</span><span class="link-desc">游戏资讯</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">游戏社区</div>
-                <div class="links-grid">
-                    <a href="https://bbs.nga.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">N</div>
-                        <span class="link-name">NGA</span><span class="link-desc">玩家社区</span>
-                    </a>
-                    <a href="https://www.gcores.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">G</div>
-                        <span class="link-name">机核网</span><span class="link-desc">游戏文化</span>
-                    </a>
-                    <a href="https://www.gamersky.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">游</div>
-                        <span class="link-name">游民星空</span><span class="link-desc">游戏资讯</span>
-                    </a>
-                    <a href="https://steamdb.info" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1b2838,#2a475e);">DB</div>
-                        <span class="link-name">SteamDB</span><span class="link-desc">Steam数据</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="game" class="section"></div>
 
         <!-- 创作工具 -->
-        <div id="tool" class="section">
-            <div class="category">
-                <div class="category-title">视频剪辑</div>
-                <div class="links-grid">
-                    <a href="https://www.capcut.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">剪</div>
-                        <span class="link-name">剪映</span><span class="link-desc">抖音剪辑</span>
-                    </a>
-                    <a href="https://www.adobe.com/products/premiere.html" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#9999ff,#b8b8ff);color:#000;">Pr</div>
-                        <span class="link-name">Premiere</span><span class="link-desc">专业剪辑</span>
-                    </a>
-                    <a href="https://www.adobe.com/products/aftereffects.html" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#9999ff,#b8b8ff);color:#000;">Ae</div>
-                        <span class="link-name">After Effects</span><span class="link-desc">特效制作</span>
-                    </a>
-                    <a href="https://www.blackmagicdesign.com/products/davinciresolve" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">Da</div>
-                        <span class="link-name">DaVinci</span><span class="link-desc">调色剪辑</span>
-                    </a>
-                    <a href="https://www.apple.com/final-cut-pro/" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#1d1d1f,#4d4d52);">Fc</div>
-                        <span class="link-name">Final Cut</span><span class="link-desc">苹果剪辑</span>
-                    </a>
-                    <a href="https://filmora.wondershare.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">F</div>
-                        <span class="link-name">万兴喵影</span><span class="link-desc">国产剪辑</span>
-                    </a>
-                </div>
-            </div>
+        <div id="tool" class="section"></div>
 
-            <div class="category">
-                <div class="category-title">设计/图片</div>
-                <div class="links-grid">
-                    <a href="https://www.adobe.com/products/photoshop.html" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#31a8ff,#66c2ff);color:#000;">Ps</div>
-                        <span class="link-name">Photoshop</span><span class="link-desc">图像处理</span>
-                    </a>
-                    <a href="https://www.figma.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#f24e1e,#ff7a52);">F</div>
-                        <span class="link-name">Figma</span><span class="link-desc">UI设计</span>
-                    </a>
-                    <a href="https://www.canva.cn" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00c4cc,#33e6ed);">C</div>
-                        <span class="link-name">Canva</span><span class="link-desc">在线设计</span>
-                    </a>
-                    <a href="https://www.photopea.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#31a8ff,#66c2ff);color:#000;">Pp</div>
-                        <span class="link-name">Photopea</span><span class="link-desc">在线PS</span>
-                    </a>
-                    <a href="https://www.remove.bg" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b00,#ff8533);">R</div>
-                        <span class="link-name">Remove.bg</span><span class="link-desc">抠图工具</span>
-                    </a>
-                    <a href="https://unsplash.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#000,#333);">U</div>
-                        <span class="link-name">Unsplash</span><span class="link-desc">免费图片</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-title">音频/特效</div>
-                <div class="links-grid">
-                    <a href="https://www.audacityteam.org" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">Au</div>
-                        <span class="link-name">Audacity</span><span class="link-desc">免费音频</span>
-                    </a>
-                    <a href="https://www.adobe.com/products/audition.html" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00e4bb,#4dffd6);color:#000;">Au</div>
-                        <span class="link-name">Audition</span><span class="link-desc">专业音频</span>
-                    </a>
-                    <a href="https://freesound.org" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00be06,#33d166);">FS</div>
-                        <span class="link-name">Freesound</span><span class="link-desc">免费音效</span>
-                    </a>
-                    <a href="https://mixkit.co" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff6b6b,#ff8e8e);">M</div>
-                        <span class="link-name">Mixkit</span><span class="link-desc">免费素材</span>
-                    </a>
-                    <a href="https://www.videvo.net" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#00a0e9,#33b5e5);">V</div>
-                        <span class="link-name">Videvo</span><span class="link-desc">视频素材</span>
-                    </a>
-                    <a href="https://motionarray.com" class="link-card" target="_blank">
-                        <div class="link-icon" style="background: linear-gradient(135deg,#ff0050,#ff4d7a);">MA</div>
-                        <span class="link-name">Motion Array</span><span class="link-desc">AE模板</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <!-- 学习教育 -->
+        <div id="edu" class="section"></div>
 
         <footer>
-            <p>© 2012-2026 看电视 tvcn.org 直播·视频·电视·音乐·有声·游戏·体育·纪录片·娱乐 <a href="https://netcn.org/" target="_blank">最简上网导航</a></p>
+            <span>© 2012-2026 看电视 tvcn.org 直播·视频·音乐·游戏</span>
+            <a href="https://netcn.org/" class="footer-link">最简上网导航</a>
         </footer>
     </div>
 
     <script>
+        // 网站数据配置
+        const siteData = {
+            video: [
+                {
+                    title: "综合视频平台",
+                    links: [
+                        { name: "优酷", desc: "综合视频", icon: "优", color: "#1e90ff,#00a0e9", hot: true },
+                        { name: "爱奇艺", desc: "综合视频", icon: "爱", color: "#00be06,#00d166", hot: true },
+                        { name: "腾讯视频", desc: "综合视频", icon: "腾", color: "#00a0e9,#00c3ff", hot: true },
+                        { name: "芒果TV", desc: "综艺娱乐", icon: "芒", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "哔哩哔哩", desc: "弹幕视频", icon: "B", color: "#fb7299,#ff85ad", hot: true },
+                        { name: "西瓜视频", desc: "字节视频", icon: "西", color: "#f04142,#ff6b6b" },
+                        { name: "好看视频", desc: "百度视频", icon: "好", color: "#ff6b00,#ff8533" },
+                        { name: "搜狐视频", desc: "美剧资源", icon: "搜", color: "#ff8500,#ffa94d" },
+                        { name: "1905电影", desc: "电影频道", icon: "19", color: "#c41230,#e62e4c" },
+                        { name: "央视网", desc: "官方视频", icon: "央", color: "#c41230,#e62e4c" },
+                        { name: "央视频", desc: "央视新媒体", icon: "央", color: "#c41230,#e62e4c", hot: true },
+                        { name: "咪咕视频", desc: "体育赛事", icon: "咪", color: "#0091ff,#33b5ff" }
+                    ]
+                },
+                {
+                    title: "国外视频平台",
+                    links: [
+                        { name: "YouTube", desc: "全球最大", icon: "▶", color: "#ff0000,#ff4d4d", hot: true },
+                        { name: "Netflix", desc: "流媒体巨头", icon: "N", color: "#e50914,#ff1a25", hot: true },
+                        { name: "Disney+", desc: "迪士尼", icon: "D+", color: "#113ccf,#3366ff" },
+                        { name: "Hulu", desc: "美国视频", icon: "H", color: "#1ce783,#4dffa3" },
+                        { name: "Max", desc: "HBO新品牌", icon: "M", color: "#9900ff,#b84dff" },
+                        { name: "Prime Video", desc: "亚马逊", icon: "P", color: "#00a8e1,#33ccff" },
+                        { name: "Apple TV+", desc: "苹果原创", icon: "A", color: "#000,#333" },
+                        { name: "Vimeo", desc: "高清视频", icon: "V", color: "#1ab7ea,#4dcfff" },
+                        { name: "Dailymotion", desc: "法国视频", icon: "D", color: "#00d1c1,#33e6d6" },
+                        { name: "Peacock", desc: "NBC环球", icon: "P", color: "#00d1c1,#33e6d6" },
+                        { name: "Paramount+", desc: "派拉蒙", icon: "P+", color: "#0064ff,#3385ff" },
+                        { name: "Crunchyroll", desc: "动漫平台", icon: "C", color: "#f47521,#ff9a4d" }
+                    ]
+                },
+                {
+                    title: "体育视频",
+                    links: [
+                        { name: "腾讯体育", desc: "NBA英超", icon: "腾", color: "#00a0e9,#33b5e5", hot: true },
+                        { name: "爱奇艺体育", desc: "足球网球", icon: "爱", color: "#00be06,#33d166" },
+                        { name: "咪咕体育", desc: "体育赛事", icon: "咪", color: "#0091ff,#33b5ff", hot: true },
+                        { name: "新浪体育", desc: "体育新闻", icon: "新", color: "#c41230,#e62e4c" },
+                        { name: "网易体育", desc: "体育资讯", icon: "网", color: "#c41230,#e62e4c" },
+                        { name: "NBA官网", desc: "美国篮球", icon: "NBA", color: "#1d428a,#3366cc", hot: true },
+                        { name: "FIFA", desc: "国际足联", icon: "F", color: "#326295,#4d85b8" },
+                        { name: "ESPN", desc: "体育巨头", icon: "E", color: "#c41230,#e62e4c" }
+                    ]
+                },
+                {
+                    title: "纪录片/知识",
+                    links: [
+                        { name: "央视纪录", desc: "官方纪录", icon: "央", color: "#c41230,#e62e4c" },
+                        { name: "B站纪录片", desc: "优质纪录", icon: "B", color: "#fb7299,#ff85ad" },
+                        { name: "Discovery", desc: "探索频道", icon: "D", color: "#0064ff,#3385ff" },
+                        { name: "国家地理", desc: "自然人文", icon: "NG", color: "#ffcc00,#ffe066", dark: true },
+                        { name: "TED", desc: "演讲平台", icon: "T", color: "#e62b1e,#ff5c4d" },
+                        { name: "一席", desc: "中国TED", icon: "一", color: "#000,#333" },
+                        { name: "看理想", desc: "人文知识", icon: "看", color: "#333,#666" },
+                        { name: "混沌学园", desc: "商业思维", icon: "混", color: "#ff6b00,#ff8533" }
+                    ]
+                },
+                {
+                    title: "动漫动画",
+                    links: [
+                        { name: "B站番剧", desc: "动漫番剧", icon: "B", color: "#fb7299,#ff85ad", hot: true },
+                        { name: "腾讯视频动漫", desc: "国漫日漫", icon: "腾", color: "#00a0e9,#33b5e5" },
+                        { name: "爱奇艺动漫", desc: "动漫频道", icon: "爱", color: "#00be06,#33d166" },
+                        { name: "优酷动漫", desc: "动漫视频", icon: "优", color: "#1e90ff,#4da6ff" },
+                        { name: "Crunchyroll", desc: "海外动漫", icon: "C", color: "#f47521,#ff9a4d" },
+                        { name: "巴哈姆特", desc: "动画疯", icon: "巴", color: "#00a0e9,#33b5e5" }
+                    ]
+                }
+            ],
+            tv: [
+                {
+                    title: "央视直播频道",
+                    links: [
+                        { name: "CCTV-1", desc: "综合", icon: "C1", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-2", desc: "财经", icon: "C2", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-3", desc: "综艺", icon: "C3", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-4", desc: "国际", icon: "C4", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-5", desc: "体育", icon: "C5", color: "#c41230,#e62e4c", hot: true },
+                        { name: "CCTV-5+", desc: "赛事", icon: "C5+", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-6", desc: "电影", icon: "C6", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-8", desc: "电视剧", icon: "C8", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-9", desc: "纪录", icon: "C9", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-10", desc: "科教", icon: "C10", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-13", desc: "新闻", icon: "C13", color: "#c41230,#e62e4c" },
+                        { name: "CCTV-14", desc: "少儿", icon: "C14", color: "#c41230,#e62e4c" }
+                    ]
+                },
+                {
+                    title: "卫视频道",
+                    links: [
+                        { name: "湖南卫视", desc: "综艺之王", icon: "湖", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "浙江卫视", desc: "中国蓝", icon: "浙", color: "#00a0e9,#33b5e5" },
+                        { name: "江苏卫视", desc: "幸福中国", icon: "江", color: "#00be06,#33d166" },
+                        { name: "东方卫视", desc: "上海", icon: "东", color: "#ff6b6b,#ff8e8e" },
+                        { name: "北京卫视", desc: "首都", icon: "北", color: "#c41230,#e62e4c" },
+                        { name: "深圳卫视", desc: "先锋", icon: "深", color: "#00a0e9,#33b5e5" },
+                        { name: "广东卫视", desc: "岭南", icon: "粤", color: "#00be06,#33d166" },
+                        { name: "山东卫视", desc: "齐鲁", icon: "鲁", color: "#00a0e9,#33b5e5" },
+                        { name: "天津卫视", desc: "天津", icon: "津", color: "#c41230,#e62e4c" },
+                        { name: "四川卫视", desc: "天府", icon: "川", color: "#ff6b00,#ff8533" },
+                        { name: "安徽卫视", desc: "安徽", icon: "皖", color: "#00a0e9,#33b5e5" },
+                        { name: "重庆卫视", desc: "山城", icon: "渝", color: "#ff6b6b,#ff8e8e" }
+                    ]
+                },
+                {
+                    title: "地方频道",
+                    links: [
+                        { name: "河南卫视", desc: "中原", icon: "豫", color: "#c41230,#e62e4c" },
+                        { name: "河北卫视", desc: "燕赵", icon: "冀", color: "#00a0e9,#33b5e5" },
+                        { name: "辽宁卫视", desc: "辽宁", icon: "辽", color: "#00be06,#33d166" },
+                        { name: "黑龙江卫视", desc: "黑龙江", icon: "黑", color: "#1d1d1f,#4d4d52" },
+                        { name: "湖北卫视", desc: "荆楚", icon: "鄂", color: "#c41230,#e62e4c" },
+                        { name: "江西卫视", desc: "江西", color: "#ff6b00,#ff8533" },
+                        { name: "云南卫视", desc: "云南", icon: "云", color: "#00be06,#33d166" },
+                        { name: "贵州卫视", desc: "贵州", icon: "贵", color: "#00a0e9,#33b5e5" },
+                        { name: "广西卫视", desc: "广西", icon: "桂", color: "#00be06,#33d166" },
+                        { name: "海南卫视", desc: "海南", icon: "琼", color: "#ff6b00,#ff8533" },
+                        { name: "陕西卫视", desc: "陕西", icon: "陕", color: "#c41230,#e62e4c" },
+                        { name: "山西卫视", desc: "山西", icon: "晋", color: "#c41230,#e62e4c" }
+                    ]
+                },
+                {
+                    title: "港澳台电视",
+                    links: [
+                        { name: "TVB", desc: "香港", icon: "TV", color: "#00be06,#33d166" },
+                        { name: "凤凰卫视", desc: "香港", icon: "凤", color: "#ff6b00,#ff8533" },
+                        { name: "香港电台", desc: "香港", icon: "RTH", color: "#c41230,#e62e4c" },
+                        { name: "澳视澳门", desc: "澳门", icon: "澳", color: "#00a0e9,#33b5e5" },
+                        { name: "东森电视", desc: "台湾", icon: "东", color: "#ff6b00,#ff8533" },
+                        { name: "中天电视", desc: "台湾", icon: "中", color: "#00a0e9,#33b5e5" }
+                    ]
+                },
+                {
+                    title: "国际新闻频道",
+                    links: [
+                        { name: "BBC新闻", desc: "英国", icon: "BBC", color: "#c41230,#e62e4c" },
+                        { name: "CNN", desc: "美国", icon: "CNN", color: "#c41230,#e62e4c" },
+                        { name: "半岛电视", desc: "卡塔尔", icon: "半岛", color: "#ff6b00,#ff8533" },
+                        { name: "France24", desc: "法国", icon: "F24", color: "#00008b,#4169e1" },
+                        { name: "NHK日本", desc: "日本", icon: "NHK", color: "#c41230,#e62e4c" },
+                        { name: "RT今日", desc: "俄罗斯", icon: "RT", color: "#c41230,#e62e4c" }
+                    ]
+                }
+            ],
+            music: [
+                {
+                    title: "音乐平台",
+                    links: [
+                        { name: "网易云音乐", desc: "音乐社区", icon: "网", color: "#c20c0c,#e62e2e", hot: true },
+                        { name: "QQ音乐", desc: "海量曲库", icon: "Q", color: "#31c27c,#5dd69a", hot: true },
+                        { name: "酷狗音乐", desc: "音乐播放", icon: "酷", color: "#00a9ff,#33beff" },
+                        { name: "酷我音乐", desc: "音乐盒", icon: "我", color: "#ff6b00,#ff8533" },
+                        { name: "Apple Music", desc: "苹果音乐", icon: "♫", color: "#fa243c,#ff5c70" },
+                        { name: "Spotify", desc: "全球音乐", icon: "S", color: "#1db954,#4dd97a" },
+                        { name: "YouTube Music", desc: "视频音乐", icon: "Y", color: "#ff0000,#ff4d4d" },
+                        { name: "SoundCloud", desc: "独立音乐", icon: "☁", color: "#ff5500,#ff7a33" },
+                        { name: "Bandcamp", desc: "独立音乐", icon: "B", color: "#1da0c3,#4db8d6" },
+                        { name: "Tidal", desc: "高音质", icon: "T", color: "#000,#333" },
+                        { name: "Amazon Music", desc: "亚马逊", icon: "A", color: "#00a8e1,#33ccff" },
+                        { name: "汽水音乐", desc: "字节音乐", icon: "汽", color: "#ff0050,#ff4d7a" }
+                    ]
+                },
+                {
+                    title: "播客/有声书",
+                    links: [
+                        { name: "喜马拉雅", desc: "音频平台", icon: "喜", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "蜻蜓FM", desc: "广播电台", icon: "蜻", color: "#00bcd4,#33d1e6" },
+                        { name: "荔枝FM", desc: "声音社区", icon: "荔", color: "#e91e63,#ff4d8a" },
+                        { name: "小宇宙", desc: "播客平台", icon: "宇", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "Apple播客", desc: "播客平台", icon: "P", color: "#9933ff,#b366ff" },
+                        { name: "Audible", desc: "有声书", icon: "A", color: "#f7991c,#ffb84d" },
+                        { name: "樊登读书", desc: "知识付费", icon: "樊", color: "#c41230,#e62e4c" },
+                        { name: "得到", desc: "知识服务", icon: "得", color: "#ff6b00,#ff8533" }
+                    ]
+                },
+                {
+                    title: "K歌娱乐",
+                    links: [
+                        { name: "全民K歌", desc: "腾讯K歌", icon: "全", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "唱吧", desc: "手机KTV", icon: "唱", color: "#ff4757,#ff6b7a" },
+                        { name: "酷狗唱唱", desc: "酷狗K歌", icon: "唱", color: "#00a9ff,#33beff" },
+                        { name: "音遇", desc: "音乐社交", icon: "音", color: "#ff6b00,#ff8533" }
+                    ]
+                },
+                {
+                    title: "音乐工具",
+                    links: [
+                        { name: "歌词适配", desc: "歌词下载", icon: "词", color: "#00be06,#33d166" },
+                        { name: "音乐雷达", desc: "听歌识曲", icon: "雷", color: "#ff6b00,#ff8533" },
+                        { name: "Ultimate Guitar", desc: "吉他谱", icon: "UG", color: "#000,#333" },
+                        { name: "Chordify", desc: "和弦识别", icon: "C", color: "#00d1c1,#33e6d6" }
+                    ]
+                }
+            ],
+            short: [
+                {
+                    title: "短视频平台",
+                    links: [
+                        { name: "抖音", desc: "记录美好生活", icon: "抖", color: "#000,#333", hot: true },
+                        { name: "快手", desc: "拥抱每一种生活", icon: "快", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "小红书", desc: "标记我的生活", icon: "红", color: "#ff2442,#ff5c70", hot: true },
+                        { name: "视频号", desc: "微信视频", icon: "视", color: "#07c160,#4dd97a" },
+                        { name: "TikTok", desc: "国际版抖音", icon: "T", color: "#000,#333", hot: true },
+                        { name: "Instagram", desc: "图片社交", icon: "I", color: "#f09433,#bc1888", hot: true },
+                        { name: "Snapchat", desc: "阅后即焚", icon: "S", color: "#fffc00,#fffe66", dark: true },
+                        { name: "Likee", desc: "短视频", icon: "L", color: "#ff0050,#ff4d7a" }
+                    ]
+                },
+                {
+                    title: "短视频工具",
+                    links: [
+                        { name: "剪映", desc: "抖音剪辑", icon: "剪", color: "#000,#333", hot: true },
+                        { name: "快影", desc: "快手剪辑", icon: "快", color: "#ff6b00,#ff8533" },
+                        { name: "必剪", desc: "B站剪辑", icon: "必", color: "#fb7299,#ff85ad" },
+                        { name: "CapCut", desc: "剪映国际版", icon: "C", color: "#000,#333" },
+                        { name: "VN剪辑", desc: "专业剪辑", icon: "VN", color: "#ff6b00,#ff8533" },
+                        { name: "Wink", desc: "视频美化", icon: "W", color: "#ff6b6b,#ff8e8e" }
+                    ]
+                },
+                {
+                    title: "短视频素材",
+                    links: [
+                        { name: "抖音素材", desc: "官方素材", icon: "抖", color: "#000,#333" },
+                        { name: "快手素材", desc: "官方素材", icon: "快", color: "#ff6b00,#ff8533" },
+                        { name: "新片场", desc: "视频素材", icon: "新", color: "#ff6b00,#ff8533" },
+                        { name: "VJ师", desc: "视频素材", icon: "VJ", color: "#00a0e9,#33b5e5" },
+                        { name: "潮点视频", desc: "短视频素材", icon: "潮", color: "#ff0050,#ff4d7a" },
+                        { name: "做视频网", desc: "视频素材", icon: "做", color: "#00be06,#33d166" }
+                    ]
+                }
+            ],
+            live: [
+                {
+                    title: "游戏直播",
+                    links: [
+                        { name: "虎牙直播", desc: "游戏直播", icon: "虎", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "斗鱼直播", desc: "游戏直播", icon: "鱼", color: "#ff6b6b,#ff8e8e", hot: true },
+                        { name: "B站直播", desc: "弹幕直播", icon: "B", color: "#fb7299,#ff85ad", hot: true },
+                        { name: "快手直播", desc: "游戏直播", icon: "快", color: "#ff6b00,#ff8533" },
+                        { name: "抖音直播", desc: "游戏直播", icon: "抖", color: "#000,#333" },
+                        { name: "Twitch", desc: "国外游戏", icon: "T", color: "#9146ff,#b47aff", hot: true },
+                        { name: "YouTube Live", desc: "油管直播", icon: "Y", color: "#ff0000,#ff4d4d" },
+                        { name: "Steam直播", desc: "Steam", icon: "S", color: "#1b2838,#2a475e" }
+                    ]
+                },
+                {
+                    title: "电商/娱乐直播",
+                    links: [
+                        { name: "淘宝直播", desc: "电商直播", icon: "淘", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "京东直播", desc: "京东直播", icon: "京", color: "#e4393c,#ff6b6b" },
+                        { name: "拼多多直播", desc: "拼多多", icon: "拼", color: "#e02e24,#ff6b6b" },
+                        { name: "小红书直播", desc: "小红书", icon: "红", color: "#ff2442,#ff5c70" },
+                        { name: "蘑菇街", desc: "时尚直播", icon: "蘑", color: "#ff6b00,#ff8533" },
+                        { name: "花椒直播", desc: "娱乐直播", icon: "花", color: "#ff6b00,#ff8533" }
+                    ]
+                },
+                {
+                    title: "体育/户外直播",
+                    links: [
+                        { name: "企鹅体育", desc: "体育赛事", icon: "企", color: "#00a0e9,#33b5e5" },
+                        { name: "中国体育", desc: "体育直播", icon: "体", color: "#c41230,#e62e4c" },
+                        { name: "抓饭直播", desc: "体育直播", icon: "抓", color: "#ff6b00,#ff8533" },
+                        { name: "球吧直播", desc: "体育直播", icon: "球", color: "#00be06,#33d166" },
+                        { name: "映客直播", desc: "娱乐直播", icon: "映", color: "#ff0050,#ff4d7a" },
+                        { name: "NOW直播", desc: "腾讯直播", icon: "N", color: "#ff6b00,#ff8533" }
+                    ]
+                }
+            ],
+            movie: [
+                {
+                    title: "在线影视",
+                    links: [
+                        { name: "爱奇艺剧集", desc: "电视剧", icon: "爱", color: "#00be06,#33d166" },
+                        { name: "腾讯电视剧", desc: "电视剧", icon: "腾", color: "#00a0e9,#33b5e5" },
+                        { name: "优酷剧集", desc: "电视剧", icon: "优", color: "#1e90ff,#4da6ff" },
+                        { name: "芒果剧集", desc: "电视剧", icon: "芒", color: "#ff6b00,#ff8533" },
+                        { name: "B站番剧", desc: "动漫", icon: "B", color: "#fb7299,#ff85ad", hot: true },
+                        { name: "Netflix", desc: "美剧韩剧", icon: "N", color: "#e50914,#ff1a25", hot: true },
+                        { name: "Disney+", desc: "漫威星战", icon: "D+", color: "#113ccf,#3366ff" },
+                        { name: "HBO Max", desc: "美剧", icon: "H", color: "#9900ff,#b84dff" }
+                    ]
+                },
+                {
+                    title: "影视资讯",
+                    links: [
+                        { name: "豆瓣电影", desc: "评分评论", icon: "豆", color: "#00b51d,#33d14d", hot: true },
+                        { name: "IMDb", desc: "全球电影", icon: "IM", color: "#f5c518,#ffe066", dark: true },
+                        { name: "烂番茄", desc: "影评网站", icon: "RT", color: "#fa320a,#ff6b4d" },
+                        { name: "时光网", desc: "电影资讯", icon: "时", color: "#1e90ff,#4da6ff" },
+                        { name: "猫眼电影", desc: "票房资讯", icon: "猫", color: "#ef4239,#ff6b6b" },
+                        { name: "1905电影", desc: "电影频道", icon: "19", color: "#c41230,#e62e4c" }
+                    ]
+                },
+                {
+                    title: "字幕资源",
+                    links: [
+                        { name: "SubHD", desc: "字幕下载", icon: "S", color: "#00a0e9,#33b5e5" },
+                        { name: "射手网", desc: "字幕下载", icon: "射", color: "#ff6b6b,#ff8e8e" },
+                        { name: "R3字幕", desc: "字幕组", icon: "R3", color: "#00be06,#33d166" },
+                        { name: "人人影视", desc: "美剧字幕", icon: "人", color: "#00a0e9,#33b5e5" }
+                    ]
+                },
+                {
+                    title: "电影资源",
+                    links: [
+                        { name: "爱奇艺电影", desc: "电影频道", icon: "爱", color: "#00be06,#33d166" },
+                        { name: "腾讯电影", desc: "电影频道", icon: "腾", color: "#00a0e9,#33b5e5" },
+                        { name: "优酷电影", desc: "电影频道", icon: "优", color: "#1e90ff,#4da6ff" },
+                        { name: "芒果电影", desc: "电影频道", icon: "芒", color: "#ff6b00,#ff8533" },
+                        { name: "B站电影", desc: "电影频道", icon: "B", color: "#fb7299,#ff85ad" },
+                        { name: "1905电影网", desc: "电影频道", icon: "19", color: "#c41230,#e62e4c" }
+                    ]
+                }
+            ],
+            game: [
+                {
+                    title: "游戏平台",
+                    links: [
+                        { name: "Steam", desc: "游戏商店", icon: "S", color: "#1b2838,#2a475e", hot: true },
+                        { name: "Epic", desc: "免费游戏", icon: "E", color: "#000,#333", hot: true },
+                        { name: "Xbox", desc: "微软游戏", icon: "X", color: "#107c10,#33a33d" },
+                        { name: "PlayStation", desc: "索尼游戏", icon: "PS", color: "#003791,#3366cc" },
+                        { name: "Nintendo", desc: "任天堂", icon: "N", color: "#e60012,#ff4d5c" },
+                        { name: "TapTap", desc: "手游社区", icon: "T", color: "#14b9c8,#4dd1db", hot: true },
+                        { name: "GOG", desc: "无DRM", icon: "G", color: "#86328a,#b866bc" },
+                        { name: "itch.io", desc: "独立游戏", icon: "I", color: "#fa5c5c,#ff8e8e" }
+                    ]
+                },
+                {
+                    title: "电竞赛事",
+                    links: [
+                        { name: "LPL", desc: "英雄联盟", icon: "L", color: "#c89b3c,#e6c26b", hot: true },
+                        { name: "KPL", desc: "王者荣耀", icon: "K", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "DOTA2", desc: "刀塔2", icon: "D2", color: "#ff0000,#ff4d4d" },
+                        { name: "CS:GO", desc: "反恐精英", icon: "CS", color: "#f5af0d,#ffd14d", dark: true },
+                        { name: "Valorant", desc: "无畏契约", icon: "V", color: "#ff4655,#ff7a85" },
+                        { name: "PUBG", desc: "绝地求生", icon: "P", color: "#f2a900,#ffd14d", dark: true }
+                    ]
+                },
+                {
+                    title: "游戏社区",
+                    links: [
+                        { name: "NGA", desc: "玩家社区", icon: "N", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "机核网", desc: "游戏文化", icon: "G", color: "#ff6b00,#ff8533" },
+                        { name: "游民星空", desc: "游戏资讯", icon: "游", color: "#00be06,#33d166" },
+                        { name: "3DM", desc: "游戏资讯", icon: "3", color: "#c41230,#e62e4c" },
+                        { name: "SteamDB", desc: "Steam数据", icon: "DB", color: "#1b2838,#2a475e" },
+                        { name: "IGN中国", desc: "游戏评测", icon: "IGN", color: "#bf1313,#e64d4d" }
+                    ]
+                },
+                {
+                    title: "热门游戏",
+                    links: [
+                        { name: "原神", desc: "开放世界", icon: "原", color: "#4a5568,#718096", hot: true },
+                        { name: "王者荣耀", desc: "MOBA手游", icon: "王", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "英雄联盟", desc: "MOBA端游", icon: "英", color: "#c89b3c,#e6c26b", hot: true },
+                        { name: "和平精英", desc: "战术竞技", icon: "和", color: "#f5af0d,#ffd14d", dark: true },
+                        { name: "我的世界", desc: "沙盒游戏", icon: "MC", color: "#5d8c3a,#7ab85c" },
+                        { name: "明日方舟", desc: "策略塔防", icon: "舟", color: "#00a0e9,#33b5e5" }
+                    ]
+                }
+            ],
+            tool: [
+                {
+                    title: "视频剪辑",
+                    links: [
+                        { name: "剪映", desc: "抖音剪辑", icon: "剪", color: "#000,#333", hot: true },
+                        { name: "Premiere", desc: "专业剪辑", icon: "Pr", color: "#9999ff,#b8b8ff", dark: true },
+                        { name: "After Effects", desc: "特效制作", icon: "Ae", color: "#9999ff,#b8b8ff", dark: true },
+                        { name: "DaVinci", desc: "调色剪辑", icon: "Da", color: "#ff6b6b,#ff8e8e" },
+                        { name: "Final Cut", desc: "苹果剪辑", icon: "Fc", color: "#1d1d1f,#4d4d52" },
+                        { name: "万兴喵影", desc: "国产剪辑", icon: "喵", color: "#ff6b00,#ff8533" },
+                        { name: "必剪", desc: "B站剪辑", icon: "必", color: "#fb7299,#ff85ad" },
+                        { name: "快影", desc: "快手剪辑", icon: "快", color: "#ff6b00,#ff8533" }
+                    ]
+                },
+                {
+                    title: "设计/图片",
+                    links: [
+                        { name: "Photoshop", desc: "图像处理", icon: "Ps", color: "#31a8ff,#66c2ff", dark: true },
+                        { name: "Figma", desc: "UI设计", icon: "F", color: "#f24e1e,#ff7a52", hot: true },
+                        { name: "Canva", desc: "在线设计", icon: "C", color: "#00c4cc,#33e6ed" },
+                        { name: "创客贴", desc: "在线设计", icon: "创", color: "#ff6b00,#ff8533" },
+                        { name: "稿定设计", desc: "在线设计", icon: "稿", color: "#ff6b00,#ff8533" },
+                        { name: "Remove.bg", desc: "抠图工具", icon: "R", color: "#ff6b00,#ff8533" },
+                        { name: "Unsplash", desc: "免费图片", icon: "U", color: "#000,#333" },
+                        { name: "Pexels", desc: "免费素材", icon: "P", color: "#07a081,#4dd9b8" }
+                    ]
+                },
+                {
+                    title: "音频/特效",
+                    links: [
+                        { name: "Audacity", desc: "免费音频", icon: "Au", color: "#00be06,#33d166" },
+                        { name: "Audition", desc: "专业音频", icon: "Au", color: "#00e4bb,#4dffd6", dark: true },
+                        { name: "Freesound", desc: "免费音效", icon: "FS", color: "#00be06,#33d166" },
+                        { name: "爱给网", desc: "音效素材", icon: "爱", color: "#ff6b00,#ff8533" },
+                        { name: "Videvo", desc: "视频素材", icon: "V", color: "#00a0e9,#33b5e5" },
+                        { name: "新片场", desc: "视频素材", icon: "新", color: "#ff6b00,#ff8533" },
+                        { name: "Mixkit", desc: "免费素材", icon: "M", color: "#ff6b6b,#ff8e8e" },
+                        { name: "包图网", desc: "素材下载", icon: "包", color: "#ff6b00,#ff8533" }
+                    ]
+                },
+                {
+                    title: "实用工具",
+                    links: [
+                        { name: "格式工厂", desc: "格式转换", icon: "格", color: "#00be06,#33d166" },
+                        { name: "HandBrake", desc: "视频压缩", icon: "HB", color: "#7b68ee,#9b8af5" },
+                        { name: "OBS", desc: "录屏直播", icon: "OBS", color: "#302c3c,#5a5470", hot: true },
+                        { name: "字幕酱", desc: "字幕工具", icon: "酱", color: "#ff6b00,#ff8533" },
+                        { name: "TinyPNG", desc: "图片压缩", icon: "TP", color: "#00be06,#33d166" },
+                        { name: "ILovePDF", desc: "PDF工具", icon: "PDF", color: "#e74c3c,#ff6b6b" }
+                    ]
+                }
+            ],
+            edu: [
+                {
+                    title: "在线教育",
+                    links: [
+                        { name: "中国大学MOOC", desc: "高校课程", icon: "MOOC", color: "#00be06,#33d166", hot: true },
+                        { name: "学堂在线", desc: "清华课程", icon: "学", color: "#8b0000,#b84d4d" },
+                        { name: "Coursera", desc: "在线课程", icon: "C", color: "#0056d2,#3385ff" },
+                        { name: "edX", desc: "名校课程", icon: "eX", color: "#02204d,#4d5c8a" },
+                        { name: "可汗学院", desc: "免费教育", icon: "K", color: "#14bf96,#4dd9b8" },
+                        { name: "网易公开课", desc: "公开课", icon: "网", color: "#c41230,#e62e4c" },
+                        { name: "腾讯课堂", desc: "在线课程", icon: "腾", color: "#00a0e9,#33b5e5" },
+                        { name: "B站课堂", desc: "知识区", icon: "B", color: "#fb7299,#ff85ad" }
+                    ]
+                },
+                {
+                    title: "编程学习",
+                    links: [
+                        { name: "GitHub", desc: "代码托管", icon: "GH", color: "#000,#333", hot: true },
+                        { name: "Stack Overflow", desc: "编程问答", icon: "SO", color: "#f48024,#ffa64d" },
+                        { name: "LeetCode", desc: "算法练习", icon: "LC", color: "#ffa116,#ffc14d", dark: true },
+                        { name: "MDN", desc: "Web文档", icon: "MDN", color: "#000,#333" },
+                        { name: "W3School", desc: "Web教程", icon: "W3", color: "#4caf50,#80e27e" },
+                        { name: "FreeCodeCamp", desc: "免费编程", icon: "FC", color: "#0a0a23,#4d4d66" }
+                    ]
+                },
+                {
+                    title: "语言学习",
+                    links: [
+                        { name: "Duolingo", desc: "语言学习", icon: "多", color: "#58cc02,#85e04d" },
+                        { name: "沪江网校", desc: "语言学习", icon: "沪", color: "#ff6b00,#ff8533" },
+                        { name: "扇贝单词", desc: "背单词", icon: "扇", color: "#00be06,#33d166" },
+                        { name: "百词斩", desc: "背单词", icon: "百", color: "#ff6b00,#ff8533" },
+                        { name: "BBC Learning", desc: "英语学习", icon: "BBC", color: "#c41230,#e62e4c" },
+                        { name: "TED-Ed", desc: "教育视频", icon: "TED", color: "#e62b1e,#ff5c4d" }
+                    ]
+                },
+                {
+                    title: "考试学习",
+                    links: [
+                        { name: "知乎", desc: "知识问答", icon: "知", color: "#0084ff,#4da6ff", hot: true },
+                        { name: "百度文库", desc: "文档资料", icon: "文", color: "#00a0e9,#33b5e5" },
+                        { name: "知网", desc: "学术文献", icon: "知", color: "#c41230,#e62e4c" },
+                        { name: "考研帮", desc: "考研资讯", icon: "考", color: "#00be06,#33d166" },
+                        { name: "粉笔", desc: "公考学习", icon: "粉", color: "#00a0e9,#33b5e5" },
+                        { name: "驾考宝典", desc: "驾照考试", icon: "驾", color: "#00be06,#33d166" }
+                    ]
+                }
+            ]
+        };
+
+        // 链接域名映射
+        const domainMap = {
+            "优酷": "youku.com", "爱奇艺": "iqiyi.com", "腾讯视频": "v.qq.com", "芒果TV": "mgtv.com",
+            "哔哩哔哩": "bilibili.com", "西瓜视频": "ixigua.com", "好看视频": "haokan.baidu.com",
+            "搜狐视频": "tv.sohu.com", "1905电影": "1905.com", "央视网": "cctv.com", "央视频": "ysptv.com",
+            "咪咕视频": "miguvideo.com", "咪咕体育": "miguvideo.com",
+            "YouTube": "www.youtube.com", "Netflix": "www.netflix.com", "Disney+": "www.disneyplus.com",
+            "Hulu": "www.hulu.com", "Max": "www.max.com", "Prime Video": "www.primevideo.com",
+            "Apple TV+": "tv.apple.com", "Vimeo": "vimeo.com", "Dailymotion": "www.dailymotion.com",
+            "Peacock": "www.peacocktv.com", "Paramount+": "www.paramountplus.com", "Crunchyroll": "www.crunchyroll.com",
+            "腾讯体育": "sports.qq.com", "爱奇艺体育": "sports.iqiyi.com", "新浪体育": "sports.sina.com.cn",
+            "网易体育": "sports.163.com", "NBA官网": "www.nba.com", "FIFA": "www.fifa.com", "ESPN": "www.espn.com",
+            "央视纪录": "jishi.cctv.com", "B站纪录片": "www.bilibili.com/documentary",
+            "Discovery": "www.discovery.com", "国家地理": "www.nationalgeographic.com", "TED": "www.ted.com",
+            "一席": "yixi.tv", "看理想": "www.ikanlixiang.com", "混沌学园": "www.hundun.cn",
+            "CCTV-1": "tv.cctv.com/live/cctv1", "CCTV-2": "tv.cctv.com/live/cctv2",
+            "CCTV-3": "tv.cctv.com/live/cctv3", "CCTV-4": "tv.cctv.com/live/cctv4",
+            "CCTV-5": "tv.cctv.com/live/cctv5", "CCTV-5+": "tv.cctv.com/live/cctv5plus",
+            "CCTV-6": "tv.cctv.com/live/cctv6", "CCTV-8": "tv.cctv.com/live/cctv8",
+            "CCTV-9": "tv.cctv.com/live/cctv9", "CCTV-10": "tv.cctv.com/live/cctv10",
+            "CCTV-13": "tv.cctv.com/live/cctv13", "CCTV-14": "tv.cctv.com/live/cctv14",
+            "湖南卫视": "www.mgtv.com/live", "浙江卫视": "www.zjstv.com", "江苏卫视": "www.jstv.com",
+            "东方卫视": "www.dragontv.cn", "北京卫视": "www.brtn.cn", "深圳卫视": "www.sztv.com.cn",
+            "广东卫视": "www.gdtv.cn", "山东卫视": "www.iqilu.com", "天津卫视": "www.tjtv.com.cn",
+            "四川卫视": "www.sctv.com", "安徽卫视": "www.ahtv.cn", "重庆卫视": "www.cqtv.cn",
+            "TVB": "www.tvb.com", "凤凰卫视": "www.ifeng.com", "香港电台": "www.rthk.hk",
+            "澳视澳门": "www.tdm.com.mo", "东森电视": "www.ettoday.net", "中天电视": "www.ctitv.com.tw",
+            "BBC新闻": "www.bbc.com/news", "CNN": "www.cnn.com", "半岛电视": "www.aljazeera.com",
+            "France24": "www.france24.com", "NHK日本": "www.nhk.or.jp", "RT今日": "www.rt.com",
+            "网易云音乐": "music.163.com", "QQ音乐": "y.qq.com", "酷狗音乐": "www.kugou.com",
+            "酷我音乐": "www.kuwo.cn", "Apple Music": "music.apple.com/cn", "Spotify": "open.spotify.com",
+            "YouTube Music": "music.youtube.com", "SoundCloud": "soundcloud.com",
+            "Bandcamp": "bandcamp.com", "Tidal": "tidal.com", "Amazon Music": "music.amazon.com",
+            "汽水音乐": "qishui.douyin.com", "喜马拉雅": "www.ximalaya.com", "蜻蜓FM": "www.qingting.fm",
+            "荔枝FM": "www.lizhi.fm", "小宇宙": "www.xiaoyuzhoufm.com", "Apple播客": "podcasts.apple.com/cn",
+            "Audible": "www.audible.com", "樊登读书": "www.dushu.io", "得到": "www.igetget.com",
+            "全民K歌": "kg.qq.com", "唱吧": "www.changba.com", "酷狗唱唱": "chang.kugou.com",
+            "音遇": "in66.com", "抖音": "www.douyin.com", "快手": "www.kuaishou.com",
+            "小红书": "www.xiaohongshu.com", "视频号": "channels.weixin.qq.com",
+            "TikTok": "www.tiktok.com", "Instagram": "www.instagram.com", "Snapchat": "www.snapchat.com",
+            "Likee": "likee.video", "剪映": "www.capcut.cn", "快影": "kuaishou.com/kuaiying",
+            "必剪": "bcut.bilibili.cn", "CapCut": "www.capcut.com", "VN剪辑": "vnvideo.org",
+            "Wink": "wink.meitu.com", "虎牙直播": "www.huya.com", "斗鱼直播": "www.douyu.com",
+            "B站直播": "live.bilibili.com", "快手直播": "live.kuaishou.com",
+            "抖音直播": "live.douyin.com", "Twitch": "www.twitch.tv", "YouTube Live": "www.youtube.com/live",
+            "Steam直播": "store.steampowered.com", "淘宝直播": "live.taobao.com",
+            "京东直播": "live.jd.com", "拼多多直播": "live.pinduoduo.com",
+            "小红书直播": "www.xiaohongshu.com", "蘑菇街": "www.mogu.com", "花椒直播": "www.huajiao.com",
+            "爱奇艺剧集": "www.iqiyi.com/dianshiju", "腾讯电视剧": "v.qq.com/tv",
+            "优酷剧集": "www.youku.com/show", "芒果剧集": "www.mgtv.com/tv",
+            "B站番剧": "www.bilibili.com/anime", "HBO Max": "www.max.com",
+            "豆瓣电影": "movie.douban.com", "IMDb": "www.imdb.com", "烂番茄": "www.rottentomatoes.com",
+            "时光网": "www.mtime.com", "猫眼电影": "www.maoyan.com",
+            "SubHD": "subhd.tv", "射手网": "assrt.net", "R3字幕": "r3sub.com",
+            "人人影视": "yyets.com", "Steam": "store.steampowered.com",
+            "Epic": "store.epicgames.com", "Xbox": "www.xbox.com", "PlayStation": "www.playstation.com",
+            "Nintendo": "www.nintendo.com", "TapTap": "www.taptap.cn", "GOG": "www.gog.com",
+            "itch.io": "itch.io", "LPL": "lpl.qq.com", "KPL": "pvp.qq.com",
+            "DOTA2": "www.dota2.com.cn", "CS:GO": "www.csgo.com.cn", "Valorant": "playvalorant.com",
+            "PUBG": "pubg.com", "NGA": "bbs.nga.cn", "机核网": "www.gcores.com",
+            "游民星空": "www.gamersky.com", "3DM": "www.3dmgame.com", "SteamDB": "steamdb.info",
+            "IGN中国": "www.ign.com.cn", "Premiere": "www.adobe.com/products/premiere",
+            "After Effects": "www.adobe.com/products/aftereffects", "DaVinci": "www.blackmagicdesign.com/products/davinciresolve",
+            "Final Cut": "www.apple.com/final-cut-pro", "万兴喵影": "filmora.wondershare.cn",
+            "Photoshop": "www.adobe.com/products/photoshop", "Figma": "www.figma.com",
+            "Canva": "www.canva.cn", "创客贴": "www.chuangkit.com", "稿定设计": "www.gaoding.com",
+            "Remove.bg": "www.remove.bg", "Unsplash": "unsplash.com", "Pexels": "www.pexels.com",
+            "Audacity": "www.audacityteam.org", "Audition": "www.adobe.com/products/audition",
+            "Freesound": "freesound.org", "爱给网": "www.aigei.com", "Videvo": "www.videvo.net",
+            "新片场": "www.xinpianchang.com", "Mixkit": "mixkit.co", "包图网": "ibaotu.com",
+            "格式工厂": "www.pcgeshi.com", "HandBrake": "handbrake.fr", "OBS": "obsproject.com",
+            "字幕酱": "www.zimujiang.com", "TinyPNG": "tinypng.com", "ILovePDF": "www.ilovepdf.com",
+            "腾讯视频动漫": "v.qq.com/anime", "爱奇艺动漫": "www.iqiyi.com/dongman",
+            "优酷动漫": "www.youku.com/comic", "巴哈姆特": "ani.gamer.com.tw",
+            "歌词适配": "www.lrcgc.com", "音乐雷达": "www.musictool.cn",
+            "Ultimate Guitar": "www.ultimate-guitar.com", "Chordify": "chordify.net",
+            "原神": "ys.mihoyo.com", "王者荣耀": "pvp.qq.com", "英雄联盟": "lol.qq.com",
+            "和平精英": "gp.qq.com", "我的世界": "mc.163.com", "明日方舟": "ak.hypergryph.com",
+            "知乎": "www.zhihu.com", "百度文库": "wenku.baidu.com", "知网": "www.cnki.net",
+            "考研帮": "www.kaoyan.com", "粉笔": "www.fenbi.com", "驾考宝典": "www.jiakaobaodian.com",
+            "河南卫视": "www.hntv.tv", "河北卫视": "www.hebtv.com", "辽宁卫视": "www.lntv.cn",
+            "黑龙江卫视": "www.hljtv.com", "湖北卫视": "www.hbtv.com.cn", "江西卫视": "www.jxtv.cn",
+            "云南卫视": "www.yntv.cn", "贵州卫视": "www.gzstv.com", "广西卫视": "www.gxtv.cn",
+            "海南卫视": "www.tctc.cc", "陕西卫视": "www.sxtvs.com", "山西卫视": "www.shanxiyuanwei.com",
+            "爱奇艺电影": "www.iqiyi.com/dianying", "腾讯电影": "v.qq.com/movie",
+            "优酷电影": "www.youku.com/movie", "芒果电影": "www.mgtv.com/movie",
+            "B站电影": "www.bilibili.com/movie", "1905电影网": "www.1905.com",
+            "抖音素材": "creator.douyin.com", "快手素材": "creator.kuaishou.com",
+            "VJ师": "www.vjshi.com", "潮点视频": "www.shipin520.com", "做视频网": "www.zuoshipin.com",
+            "企鹅体育": "live.qq.com", "中国体育": "www.zhibo.tv", "抓饭直播": "www.zhuafan.live",
+            "球吧直播": "www.qiuba.live", "映客直播": "www.inke.cn", "NOW直播": "now.qq.com",
+            "中国大学MOOC": "www.icourse163.org", "学堂在线": "www.xuetangx.com", "Coursera": "www.coursera.org",
+            "edX": "www.edx.org", "可汗学院": "www.khanacademy.org", "网易公开课": "open.163.com",
+            "腾讯课堂": "ke.qq.com", "B站课堂": "www.bilibili.com/cheese",
+            "GitHub": "github.com", "Stack Overflow": "stackoverflow.com",
+            "LeetCode": "leetcode.cn", "MDN": "developer.mozilla.org",
+            "W3School": "www.w3school.com.cn", "FreeCodeCamp": "www.freecodecamp.org",
+            "Duolingo": "www.duolingo.com", "沪江网校": "www.hujiang.com", "扇贝单词": "www.shanbay.com",
+            "百词斩": "www.baicizhan.org", "BBC Learning": "www.bbc.co.uk/learningenglish",
+            "TED-Ed": "ed.ted.com"
+        };
+
+        // 生成链接卡片HTML
+        function createLinkCard(link) {
+            const domain = domainMap[link.name] || "";
+            const url = domain ? `https://${domain}` : "#";
+            const hotClass = link.hot ? "tag-hot" : "";
+            const textColor = link.dark ? "color:#000;" : "";
+            return `
+                <a href="${url}" target="_blank" rel="noopener noreferrer" class="${hotClass}" data-name="${link.name.toLowerCase()}" data-desc="${link.desc.toLowerCase()}">
+                    <div class="link-icon" style="background: linear-gradient(135deg,${link.color});${textColor}">${link.icon}</div>
+                    <span class="link-name">${link.name}</span>
+                    <span class="link-desc">${link.desc}</span>
+                </a>
+            `;
+        }
+
+        // 生成分类HTML
+        function createCategory(category) {
+            const linksHtml = category.links.map(createLinkCard).join("");
+            return `
+                <div class="category">
+                    <div class="category-title">${category.title}</div>
+                    <div class="links-grid">${linksHtml}</div>
+                </div>
+            `;
+        }
+
+        // 渲染所有内容
+        function renderAll() {
+            Object.keys(siteData).forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.innerHTML = siteData[sectionId].map(createCategory).join("");
+                }
+            });
+        }
+
+        // 切换标签页
         function showSection(sectionId) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
             document.getElementById(sectionId).classList.add('active');
             event.target.classList.add('active');
         }
+
+        // 搜索功能
         function search() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            if (!query) return;
-            const links = document.querySelectorAll('.link-card');
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (!query) {
+                document.querySelectorAll('.links-grid a').forEach(link => {
+                    link.style.display = 'flex';
+                });
+                document.querySelectorAll('.category').forEach(cat => {
+                    cat.style.display = 'block';
+                });
+                return;
+            }
+
             let found = false;
-            links.forEach(link => {
-                const text = link.textContent.toLowerCase();
-                link.style.display = text.includes(query) ? 'flex' : 'none';
-                if (text.includes(query)) found = true;
+            document.querySelectorAll('.category').forEach(category => {
+                let hasMatch = false;
+                const links = category.querySelectorAll('.links-grid a');
+                links.forEach(link => {
+                    const name = link.dataset.name;
+                    const desc = link.dataset.desc;
+                    if (name.includes(query) || desc.includes(query)) {
+                        link.style.display = 'flex';
+                        hasMatch = true;
+                        found = true;
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+                category.style.display = hasMatch ? 'block' : 'none';
             });
+
             if (!found) {
                 alert('未找到相关内容');
-                links.forEach(l => l.style.display = 'flex');
+                document.querySelectorAll('.links-grid a').forEach(link => {
+                    link.style.display = 'flex';
+                });
+                document.querySelectorAll('.category').forEach(cat => {
+                    cat.style.display = 'block';
+                });
             }
         }
-        document.getElementById('searchInput').addEventListener('keypress', e => {
-            if (e.key === 'Enter') search();
-        });
 
-        // 主题切换功能
+        // 主题切换
         function toggleTheme() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme');
@@ -889,11 +731,21 @@
             localStorage.setItem('theme', newTheme);
         }
 
-        // 加载保存的主题
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        }
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            renderAll();
+
+            // 加载保存的主题
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+
+            // 搜索框回车事件
+            document.getElementById('searchInput').addEventListener('keypress', e => {
+                if (e.key === 'Enter') search();
+            });
+        });
     </script>
 </body>
 </html>

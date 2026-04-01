@@ -9,6 +9,8 @@
     --text-secondary: #888;
     --border-color: rgba(255,255,255,0.1);
     --transition: all 0.3s ease;
+    --link-color: #64b5f6;
+    --link-hover: #90caf9;
 }
 
 [data-theme="light"] {
@@ -18,6 +20,8 @@
     --text-color: #333;
     --text-secondary: #666;
     --border-color: rgba(0,0,0,0.1);
+    --link-color: #1976d2;
+    --link-hover: #1565c0;
 }
 
 body {
@@ -156,7 +160,7 @@ body {
     gap: 8px;
 }
 
-.link-card {
+.links-grid a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,10 +175,22 @@ body {
     overflow: hidden;
 }
 
-.link-card:hover {
+.links-grid a:hover {
     background: var(--card-hover);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.links-grid a.tag-hot::after {
+    content: "HOT";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
+    color: #fff;
+    font-size: 0.5rem;
+    padding: 1px 3px;
+    border-radius: 3px;
 }
 
 .link-icon {
@@ -193,23 +209,27 @@ body {
 .link-name { font-size: 0.75rem; font-weight: 500; text-align: center; }
 .link-desc { font-size: 0.65rem; color: var(--text-secondary); margin-top: 2px; }
 
-.tag-hot::after {
-    content: "HOT";
-    position: absolute;
-    top: 3px;
-    right: 3px;
-    background: linear-gradient(135deg, #ff6b00, #ff8533);
-    color: #fff;
-    font-size: 0.5rem;
-    padding: 1px 3px;
-    border-radius: 3px;
+/* 页脚样式 */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
+.footer-link {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.85rem;
+}
+
+.footer-link:hover {
+    color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -219,6 +239,8 @@ footer {
     .nav-tab { padding: 5px 12px; font-size: 0.8rem; }
     .theme-toggle { position: static; transform: none; margin-left: auto; }
     .header-bar { flex-wrap: wrap; }
+    .footer-links { gap: 8px; }
+    .footer-link { padding: 5px 12px; font-size: 0.8rem; }
 }
 
 @media (max-width: 480px) {
@@ -227,8 +249,8 @@ footer {
     .search-box { width: 100%; max-width: none; }
     .search-box input { padding: 6px 12px; }
     .search-box button { padding: 6px 14px; }
-    .link-card { padding: 8px 4px; }
+    .links-grid a { padding: 8px 4px; }
     .category { padding: 8px; margin-bottom: 6px; }
     .link-icon { width: 36px; height: 36px; font-size: 0.9rem; }
-    footer { font-size: 0.85rem; }
+    footer { font-size: 0.75rem; padding: 12px 15px; flex-direction: column; gap: 8px; text-align: center; }
 }
