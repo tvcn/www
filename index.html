@@ -59,7 +59,7 @@
 
         <footer>
             <span>© 2012-2026 看电视 tvcn.org 直播·视频·音乐·游戏</span>
-            <a href="https://netcn.org/" class="footer-link">最简上网导航</a>
+            <a href="https://netcn.org/" class="footer-link" target="_blank" rel="noopener noreferrer">最简上网导航</a>
         </footer>
     </div>
 
@@ -82,6 +82,17 @@
                         { name: "央视网", desc: "官方视频", icon: "央", color: "#c41230,#e62e4c" },
                         { name: "央视频", desc: "央视新媒体", icon: "央", color: "#c41230,#e62e4c", hot: true },
                         { name: "咪咕视频", desc: "体育赛事", icon: "咪", color: "#0091ff,#33b5ff" }
+                    ]
+                },
+                {
+                    title: "短视频/中视频",
+                    links: [
+                        { name: "抖音", desc: "短视频", icon: "抖", color: "#000,#333", hot: true },
+                        { name: "快手", desc: "短视频", icon: "快", color: "#ff6b00,#ff8533", hot: true },
+                        { name: "视频号", desc: "微信视频", icon: "视", color: "#07c160,#4dd97a" },
+                        { name: "小红书", desc: "生活分享", icon: "红", color: "#ff2442,#ff5c70" },
+                        { name: "西瓜视频", desc: "中视频", icon: "西", color: "#f04142,#ff6b6b" },
+                        { name: "抖音精选", desc: "优质视频", icon: "精", color: "#ff6b00,#ff8533" }
                     ]
                 },
                 {
@@ -530,6 +541,17 @@
                         { name: "粉笔", desc: "公考学习", icon: "粉", color: "#00a0e9,#33b5e5" },
                         { name: "驾考宝典", desc: "驾照考试", icon: "驾", color: "#00be06,#33d166" }
                     ]
+                },
+                {
+                    title: "效率工具",
+                    links: [
+                        { name: "语雀", desc: "知识库", icon: "语", color: "#00b96b,#4dd997" },
+                        { name: "Notion", desc: "笔记工具", icon: "N", color: "#000,#333", hot: true },
+                        { name: "飞书", desc: "协作办公", icon: "飞", color: "#3370ff,#6695ff" },
+                        { name: "钉钉", desc: "办公平台", icon: "钉", color: "#3370ff,#6695ff" },
+                        { name: "腾讯文档", desc: "在线文档", icon: "文", color: "#00a0e9,#33b5e5" },
+                        { name: "石墨文档", desc: "在线协作", icon: "石", color: "#007aff,#4da3ff" }
+                    ]
                 }
             ]
         };
@@ -614,6 +636,9 @@
             "和平精英": "gp.qq.com", "我的世界": "mc.163.com", "明日方舟": "ak.hypergryph.com",
             "知乎": "www.zhihu.com", "百度文库": "wenku.baidu.com", "知网": "www.cnki.net",
             "考研帮": "www.kaoyan.com", "粉笔": "www.fenbi.com", "驾考宝典": "www.jiakaobaodian.com",
+            "语雀": "www.yuque.com", "Notion": "www.notion.so", "飞书": "www.feishu.cn",
+            "钉钉": "www.dingtalk.com", "腾讯文档": "docs.qq.com", "石墨文档": "shimo.im",
+            "抖音精选": "www.douyin.com/jingxuan",
             "河南卫视": "www.hntv.tv", "河北卫视": "www.hebtv.com", "辽宁卫视": "www.lntv.cn",
             "黑龙江卫视": "www.hljtv.com", "湖北卫视": "www.hbtv.com.cn", "江西卫视": "www.jxtv.cn",
             "云南卫视": "www.yntv.cn", "贵州卫视": "www.gzstv.com", "广西卫视": "www.gxtv.cn",
@@ -636,89 +661,112 @@
             "TED-Ed": "ed.ted.com"
         };
 
-        // 生成链接卡片HTML
+        // 缓存DOM元素引用
+        const domCache = {};
+        
+        // 生成链接卡片HTML - 使用字符串拼接优化性能
         function createLinkCard(link) {
             const domain = domainMap[link.name] || "";
             const url = domain ? `https://${domain}` : "#";
             const hotClass = link.hot ? "tag-hot" : "";
             const textColor = link.dark ? "color:#000;" : "";
-            return `
-                <a href="${url}" target="_blank" rel="noopener noreferrer" class="${hotClass}" data-name="${link.name.toLowerCase()}" data-desc="${link.desc.toLowerCase()}">
-                    <div class="link-icon" style="background: linear-gradient(135deg,${link.color});${textColor}">${link.icon}</div>
-                    <span class="link-name">${link.name}</span>
-                    <span class="link-desc">${link.desc}</span>
-                </a>
-            `;
+            const nameLower = link.name.toLowerCase();
+            const descLower = link.desc.toLowerCase();
+            return '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="' + hotClass + '" data-name="' + nameLower + '" data-desc="' + descLower + '">' +
+                '<div class="link-icon" style="background:linear-gradient(135deg,' + link.color + ');' + textColor + '">' + link.icon + '</div>' +
+                '<span class="link-name">' + link.name + '</span>' +
+                '<span class="link-desc">' + link.desc + '</span>' +
+            '</a>';
         }
 
         // 生成分类HTML
         function createCategory(category) {
-            const linksHtml = category.links.map(createLinkCard).join("");
-            return `
-                <div class="category">
-                    <div class="category-title">${category.title}</div>
-                    <div class="links-grid">${linksHtml}</div>
-                </div>
-            `;
+            const links = category.links;
+            let linksHtml = '';
+            for (let i = 0; i < links.length; i++) {
+                linksHtml += createLinkCard(links[i]);
+            }
+            return '<div class="category">' +
+                '<div class="category-title">' + category.title + '</div>' +
+                '<div class="links-grid">' + linksHtml + '</div>' +
+            '</div>';
         }
 
         // 渲染所有内容
         function renderAll() {
-            Object.keys(siteData).forEach(sectionId => {
+            for (const sectionId in siteData) {
                 const section = document.getElementById(sectionId);
                 if (section) {
-                    section.innerHTML = siteData[sectionId].map(createCategory).join("");
+                    const categories = siteData[sectionId];
+                    let html = '';
+                    for (let i = 0; i < categories.length; i++) {
+                        html += createCategory(categories[i]);
+                    }
+                    section.innerHTML = html;
                 }
-            });
+            }
         }
 
-        // 切换标签页
+        // 切换标签页 - 使用事件委托优化
         function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            const sections = document.getElementsByClassName('section');
+            const tabs = document.getElementsByClassName('nav-tab');
+            
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            
             document.getElementById(sectionId).classList.add('active');
             event.target.classList.add('active');
         }
 
-        // 搜索功能
+        // 搜索功能 - 优化性能
         function search() {
             const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const allCategories = document.getElementsByClassName('category');
+            
             if (!query) {
-                document.querySelectorAll('.links-grid a').forEach(link => {
-                    link.style.display = 'flex';
-                });
-                document.querySelectorAll('.category').forEach(cat => {
-                    cat.style.display = 'block';
-                });
+                for (let i = 0; i < allCategories.length; i++) {
+                    const links = allCategories[i].getElementsByTagName('a');
+                    for (let j = 0; j < links.length; j++) {
+                        links[j].style.display = 'flex';
+                    }
+                    allCategories[i].style.display = 'block';
+                }
                 return;
             }
 
             let found = false;
-            document.querySelectorAll('.category').forEach(category => {
+            for (let i = 0; i < allCategories.length; i++) {
+                const category = allCategories[i];
+                const links = category.getElementsByTagName('a');
                 let hasMatch = false;
-                const links = category.querySelectorAll('.links-grid a');
-                links.forEach(link => {
-                    const name = link.dataset.name;
-                    const desc = link.dataset.desc;
-                    if (name.includes(query) || desc.includes(query)) {
+                
+                for (let j = 0; j < links.length; j++) {
+                    const link = links[j];
+                    if (link.dataset.name.includes(query) || link.dataset.desc.includes(query)) {
                         link.style.display = 'flex';
                         hasMatch = true;
                         found = true;
                     } else {
                         link.style.display = 'none';
                     }
-                });
+                }
                 category.style.display = hasMatch ? 'block' : 'none';
-            });
+            }
 
             if (!found) {
                 alert('未找到相关内容');
-                document.querySelectorAll('.links-grid a').forEach(link => {
-                    link.style.display = 'flex';
-                });
-                document.querySelectorAll('.category').forEach(cat => {
-                    cat.style.display = 'block';
-                });
+                for (let i = 0; i < allCategories.length; i++) {
+                    const links = allCategories[i].getElementsByTagName('a');
+                    for (let j = 0; j < links.length; j++) {
+                        links[j].style.display = 'flex';
+                    }
+                    allCategories[i].style.display = 'block';
+                }
             }
         }
 
@@ -731,6 +779,19 @@
             localStorage.setItem('theme', newTheme);
         }
 
+        // 防抖函数
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
         // 初始化
         document.addEventListener('DOMContentLoaded', function() {
             renderAll();
@@ -741,9 +802,16 @@
                 document.documentElement.setAttribute('data-theme', savedTheme);
             }
 
-            // 搜索框回车事件
-            document.getElementById('searchInput').addEventListener('keypress', e => {
-                if (e.key === 'Enter') search();
+            // 搜索框事件 - 使用防抖优化
+            const searchInput = document.getElementById('searchInput');
+            const debouncedSearch = debounce(search, 300);
+            
+            searchInput.addEventListener('input', debouncedSearch);
+            searchInput.addEventListener('keypress', e => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    search();
+                }
             });
         });
     </script>
